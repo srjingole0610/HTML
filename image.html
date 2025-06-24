@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Image Tag</title>
+</head>
+<body>
+    <h1>Understanding the HTML Image Tag and Its Attributes</h1>
+
+    <!-- Basic image tag usage -->
+    <h2>1. Basic Image</h2>
+    <img src="images/annie-spratt-H33FOyRKgfk-unsplash.jpg" alt="A person standing on a rock looking at a waterfall" width="400" height="300">
+    <p>The <strong>src</strong> attribute is crucial as it specifies the image source URL. Without a valid src, the image won't display. The <strong>alt</strong> attribute is equally important for accessibility and SEO - it describes the image for screen readers and displays if the image fails to load.</p>
+
+    <!-- Image with width and height -->
+    <h2>2. Image with Dimensions</h2>
+    <img src="images/colin-watts-g9aYfZb7_c8-unsplash.jpg" alt="A long exposure of a waterfall" width="300" height="200">
+    <p>The <strong>width</strong> and <strong>height</strong> attributes are important for performance. They prevent layout shifts during page load by reserving space for images before they load. Always specify both to maintain aspect ratio.</p>
+
+    <!-- Image with title -->
+    <h2>3. Image with Title</h2>
+    <img src="images/dmytro-bayer-cF-USjwMNzU-unsplash.jpg" alt="A snowy mountain range" title="A snowy mountain range" width="400" height="300">
+    <p>The <strong>title</strong> attribute enhances user experience by providing additional information when users hover over the image. While not essential, it's useful for complex images that need extra explanation.</p>
+
+    <!-- Responsive image -->
+    <h2>4. Responsive Image</h2>
+    <img src="images/hong-zhao-eGnfcEfkP04-unsplash.jpg" alt="A field of purple flowers" width="400" height="300">
+    <p>Using <strong>max-width: 100%</strong> and <strong>height: auto</strong> ensures images scale properly on different devices. This is crucial for mobile responsiveness and preventing horizontal scrolling.</p>
+
+    <!-- Loading attribute -->
+    <h2>5. Lazy Loading</h2>
+    <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d" alt="Dense forest with tall trees and misty atmosphere" loading="lazy" width="400" height="300">
+    <p>The <strong>loading="lazy"</strong> attribute improves page performance by loading images only when they're about to enter the viewport. This reduces initial page load time and saves bandwidth.</p>
+
+    <!-- Image map example -->
+    <h2>6. Image Map</h2>
+    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="Modern office workspace with computer and desk setup" usemap="#workmap" width="400" height="300">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="#" title="Interactive area">
+    </map>
+    <p>The <strong>usemap</strong> attribute creates interactive areas within images. The <strong>map</strong> element defines these clickable regions, making parts of an image function as links.</p>
+
+    
+    <!-- Image Path Types Section -->
+    <h2>7. Understanding Image Paths</h2>
+    
+    <!-- Absolute Path Example -->
+    <h3>Absolute Path</h3>
+    <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d" alt="Example of absolute path" width="400" height="300">
+    <p>An <strong>absolute path</strong> includes the complete URL to an image, starting with http:// or https://. It's used when referencing images from external sources or different domains.</p>
+
+    <!-- Relative Path Example -->
+    <h3>Relative Path</h3>
+    <img src="images/colin-watts-g9aYfZb7_c8-unsplash.jpg" alt="Example of relative path" width="400" height="300">
+    <p>A <strong>relative path</strong> specifies the image location relative to the current HTML file. Common patterns include:</p>
+    <ul>
+        <li><code>images/photo.jpg</code> - From a subfolder</li>
+        <li><code>../images/photo.jpg</code> - From parent directory</li>
+        <li><code>./photo.jpg</code> - From current directory</li>
+    </ul>
+
+    <!-- Images with Anchor Tags -->
+    <h2>8. Images as Links</h2>
+    
+    <!-- Basic Image Link -->
+    <h3>Basic Image Link</h3>
+    <a href="https://www.example.com">
+        <img src="images/hong-zhao-eGnfcEfkP04-unsplash.jpg" alt="Clickable image" width="150" height="100">
+    </a>
+    <p>Wrapping an image in an anchor tag makes it clickable and function as a link.</p>
+
+    <!-- Image Link with Title -->
+    <h3>Image Link with Title</h3>
+    <a href="https://www.example.com" title="Click to visit example.com">
+        <img src="images/annie-spratt-H33FOyRKgfk-unsplash.jpg" alt="Clickable image with title" width="300" height="200">
+    </a>
+    <p>Adding a title attribute to the anchor tag shows a tooltip when hovering over the linked image.</p>
+    
+    <h2>Advanced Image Attributes:</h2>
+    <ul>
+        <li><strong>srcset</strong> - Critical for responsive images. Allows browsers to choose the best image size based on device characteristics:
+            <code>srcset="small.jpg 300w, medium.jpg 600w, large.jpg 900w"</code></li>
+        <li><strong>sizes</strong> - Works with srcset to tell browsers what image size to use at different viewport widths:
+            <code>sizes="(max-width: 600px) 300px, 600px"</code></li>
+        <li><strong>crossorigin</strong> - Important when loading images from different domains, especially for canvas operations</li>
+        <li><strong>decoding</strong> - Can be set to "async" to optimize image decoding performance</li>
+    </ul>
+
+    <h2>Best Practices for Image Implementation:</h2>
+    <ul>
+        <li>Always use meaningful alt text for accessibility</li>
+        <li>Optimize images before uploading to improve load times</li>
+        <li>Use appropriate image formats based on content type</li>
+        <li>Implement lazy loading for better performance</li>
+        <li>Consider using modern formats like WebP with fallbacks</li>
+        <li>Specify image dimensions to prevent layout shifts</li>
+    </ul>
+</body>
+</html>
+        <li>Implement lazy loading: <code>loading="lazy"</code></li>
+        <li>Provide multiple sizes using srcset:
+            <code>srcset="small.jpg 300w, medium.jpg 600w"</code>
+        </li>
+        <li>Use modern formats with fallbacks:
+            <picture>
+                <source srcset="image.webp" type="image/webp">
+                <img src="image.jpg" alt="Format fallback example">
+            </picture>
+        </li>
+    </ul>
+
+    <!-- Common Image Issues -->
+    <h2>6. Common Image Issues and Solutions</h2>
+    <ul>
+        <li>Broken images: Always provide meaningful alt text</li>
+        <li>Slow loading: Use proper optimization and lazy loading</li>
+        <li>Layout shifts: Specify width and height attributes</li>
+        <li>Mobile responsiveness: Use responsive techniques and proper sizing</li>
+        <li>Accessibility: Include descriptive alt text and proper ARIA attributes when needed</li>
+    </ul>
+</body>
+</html>
