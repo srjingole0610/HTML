@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta charset defines the character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- viewport meta tag helps with responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Void Elements in HTML</title>
+</head>
+<body>
+    <h1>HTML Void Elements (Empty Elements)</h1>
+
+    <section>
+        <h2>1. Line Break Element &lt;br&gt;</h2>
+        <p>This is a line<br>break example</p>
+        <p><strong>Usage:</strong> Forces a line break. No attributes required.</p>
+    </section>
+
+    <section>
+        <h2>2. Horizontal Rule &lt;hr&gt;</h2>
+        <p>Text above the line</p>
+        <hr>
+        <p>Text below the line</p>
+        <p><strong>Attributes:</strong> size, width, color, align</p>
+    </section>
+
+    <section>
+        <h2>3. Image Element &lt;img&gt;</h2>
+        <img src="images/hong-zhao-eGnfcEfkP04-unsplash.jpg" alt="Example image" width="300" height="200">
+        <p><strong>Required Attributes:</strong> src, alt</p>
+        <p><strong>Optional Attributes:</strong> width, height, loading, srcset, sizes</p>
+    </section>
+
+    <section>
+        <h2>4. Input Elements &lt;input&gt;</h2>
+        <input type="text" placeholder="Text input">
+        <input type="checkbox" checked>
+        <input type="radio" name="option">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <input type="button" value="Click me">
+        <p><strong>Common Types:</strong> text, password, checkbox, radio, submit, reset, button, date, email, file, number</p>
+        <p><strong>Common Attributes:</strong> type, name, value, placeholder, required, disabled, readonly</p>
+    </section>
+
+    <section>
+        <h2>5. Meta Tags &lt;meta&gt;</h2>
+        <p><strong>Common Attributes:</strong> name, content, charset, http-equiv</p>
+        <p><strong>Common Uses:</strong> character encoding, viewport settings, SEO descriptions, author info</p>
+    </section>
+
+    <section>
+        <h2>6. Link Element &lt;link&gt;</h2>
+        <p>Example: &lt;link rel="stylesheet" href="styles.css"&gt;</p>
+        <p><strong>Required Attributes:</strong> rel, href</p>
+        <p><strong>Common Uses:</strong> CSS stylesheets, favicons, preloading resources</p>
+    </section>
+
+    <section>
+        <h2>7. Area Element &lt;area&gt;</h2>
+        <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer">
+        </map>
+        <p><strong>Required Attributes:</strong> shape, coords, alt</p>
+        <p><strong>Shapes:</strong> rect, circle, poly</p>
+    </section>
+
+    <section>
+        <h2>8. Base Element &lt;base&gt;</h2>
+        <p>Example: &lt;base href="https://www.example.com/"&gt;</p>
+        <p><strong>Attributes:</strong> href, target</p>
+        <p><strong>Note:</strong> Must be in head section, only one per document</p>
+    </section>
+
+    <section>
+        <h2>9. Embed Element &lt;embed&gt;</h2>
+        <embed src="file.pdf" width="500" height="200">
+        <p><strong>Required Attributes:</strong> src</p>
+        <p><strong>Optional Attributes:</strong> type, width, height</p>
+    </section>
+
+    <section>
+        <h2>10. Source Element &lt;source&gt;</h2>
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p><strong>Required Attributes:</strong> src</p>
+        <p><strong>Optional Attributes:</strong> type, media, sizes, srcset</p>
+    </section>
+
+    <section>
+        <h2>11. Track Element &lt;track&gt;</h2>
+        <video width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+        </video>
+        <p><strong>Required Attributes:</strong> src, kind, srclang</p>
+        <p><strong>Optional Attributes:</strong> label, default</p>
+    </section>
+
+    <section>
+        <h2>12. Wbr Element &lt;wbr&gt;</h2>
+        <p>This is a very long word: super<wbr>cali<wbr>fragil<wbr>istic<wbr>expiali<wbr>docious</p>
+        <p><strong>Usage:</strong> Indicates a word break opportunity. No attributes required.</p>
+    </section>
+
+    <section>
+        <h2>13. Col Element &lt;col&gt;</h2>
+        <table>
+            <colgroup>
+                <col style="background-color: yellow">
+                <col style="background-color: pink">
+            </colgroup>
+            <tr>
+                <td>Column 1</td>
+                <td>Column 2</td>
+            </tr>
+        </table>
+        <p><strong>Attributes:</strong> span, style, class</p>
+        <p><strong>Usage:</strong> Defines properties for table columns</p>
+    </section>
+
+    <section>
+        <h2>14. Param Element &lt;param&gt;</h2>
+        <object data="horse.wav">
+            <param name="autoplay" value="true">
+        </object>
+        <p><strong>Required Attributes:</strong> name, value</p>
+        <p><strong>Usage:</strong> Defines parameters for plugins used in object element</p>
+    </section>
+
+    <section>
+        <h2>Key Points About Void Elements:</h2>
+        <ul>
+            <li>Void elements have no content and no closing tag</li>
+            <li>They are also called empty elements or self-closing tags</li>
+            <li>They can have attributes but cannot have content inside</li>
+            <li>Both &lt;tag&gt; and &lt;tag/&gt; syntax are valid in HTML5</li>
+            <li>Most void elements require specific attributes to function properly</li>
+            <li>Void elements are essential for various functionalities like media embedding, form inputs, and document metadata</li>
+        </ul>
+    </section>
+</body>
+</html>
