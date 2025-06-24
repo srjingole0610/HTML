@@ -7,6 +7,7 @@ This repository contains basic HTML examples and exercises for learning fundamen
 - **anchor.html**: Examples of HTML anchor tags and hyperlinks
 - **comments.html**: Demonstration of HTML comments
 - **heading.html**: Examples of HTML heading elements
+- **htmlEntities.html**: Examples of HTML entities and special characters
 - **paragraph.html**: Examples of paragraph elements and text structuring
 - **textFormatting.html**: Examples of text formatting tags and elements
 
@@ -23,6 +24,7 @@ This repository contains basic HTML examples and exercises for learning fundamen
 - Text Formatting
 - Hyperlinks
 - HTML Comments
+- HTML Entities
 
 ## Prerequisites
 
