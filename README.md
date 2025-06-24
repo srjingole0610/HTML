@@ -12,6 +12,8 @@ This repository contains basic HTML examples and exercises for learning fundamen
 - **textFormatting.html**: Examples of text formatting tags and elements
 - **image.html**: Examples of using the image tag.
 - **voidElements.html**: Examples of void elements in HTML.
+- **figure.html**: Examples of using the figure and figcaption elements.
+- **picture.html**: Examples of using the picture element for responsive images.
 
 ## Getting Started
 
@@ -29,6 +31,7 @@ This repository contains basic HTML examples and exercises for learning fundamen
 - HTML Entities
 - Images
 - Void Elements
+- Figures and Pictures
 
 ## Prerequisites
 
