@@ -1,0 +1,150 @@
+<!-- 1. Basic Challenge: Build a Personal Introduction Page
+Level: Beginner
+Goal: Understand core HTML structure and semantic tags
+
+📋 Requirements:
+Create a web page that introduces yourself
+
+Use the following elements:
+
+A <header> with your name
+
+A <p> describing yourself
+
+An unordered list of 3 hobbies or interests
+
+A link (<a>) to your favorite website (open in a new tab)
+
+A <footer> with your contact info
+
+Bonus: Add an image using <img> and set the alt attribute appropriately. -->
+
+<style>
+.challenge-container {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.challenge-title {
+    color: #0056b3;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.challenge-level {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.challenge-goal {
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.requirements-list {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+</style>
+
+<div class="challenge-container">
+    <h2 class="challenge-title">1. Basic Challenge: Build a Personal Introduction Page</h2>
+    <span class="challenge-level">Level: Beginner</span>
+    <p class="challenge-goal">Goal: Understand core HTML structure and semantic tags</p>
+    
+    <div class="requirements-list">
+        <h3>📋 Requirements:</h3>
+        <p>Create a web page that introduces yourself</p>
+        <p>Use the following elements:</p>
+        <ul>
+            <li>A &lt;header&gt; with your name</li>
+            <li>A &lt;p&gt; describing yourself</li>
+            <li>An unordered list of 3 hobbies or interests</li>
+            <li>A link (&lt;a&gt;) to your favorite website (open in a new tab)</li>
+            <li>A &lt;footer&gt; with your contact info</li>
+        </ul>
+        <p><strong>Bonus:</strong> Add an image using &lt;img&gt; and set the alt attribute appropriately.</p>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Introduction</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-button">← Back to Index</a>
+    
+    <header>
+        <h1>Suraj Ingole</h1>
+    </header>
+
+    <main>
+        <img src="../images/surajIngole.JPG" alt="Suraj Ingole smiling at the camera" width="200">
+        
+        <p>
+            Hello! I'm Suraj, a passionate web developer with a love for creating beautiful and functional websites. 
+            I have been coding for over 5 years and enjoy learning new technologies and solving complex problems.
+        </p>
+
+        <h2>My Hobbies & Interests</h2>
+        <ul>
+            <li>Photography and digital art</li>
+            <li>Playing guitar and composing music</li>
+            <li>Hiking and outdoor adventures</li>
+        </ul>
+
+        <p>
+            Check out my favorite website: 
+            <a href="https://github.com/srjingole0610" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+    </main>
+
+    <footer>
+        <h3>Contact Information</h3>
+        <p>Email: suraj.ingole0610@gmail.com</p>
+        <p>Phone: +91 7385300245</p>
+        <p>Location: Maharastra, India</p>
+    </footer>
+</body>
+</html>

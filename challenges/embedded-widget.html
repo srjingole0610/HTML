@@ -1,0 +1,188 @@
+<!-- 🛡️ 5. Advanced Challenge: Create a Secure Embedded Widget with <iframe> and sandbox
+Level: Advanced
+Goal: Use <iframe> responsibly and securely
+
+📋 Requirements:
+Embed an external page (e.g., a YouTube video or Google Maps) using <iframe>
+
+Apply the following:
+
+Set title, width, and height
+
+Use the sandbox attribute with appropriate values
+
+Use loading="lazy" and referrerpolicy="no-referrer"
+    
+Bonus: Make the iframe responsive using CSS and aspect-ratio or padding technique.
+
+Let me know if you'd like starter templates, solution examples, or a zip with these challenges preloaded for practice! -->
+
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+
+  .challenge-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .challenge-title {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+
+  .challenge-level {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin: 10px 0;
+  }
+
+  .challenge-goal {
+    font-style: italic;
+    color: #7f8c8d;
+    margin: 15px 0;
+  }
+
+  .requirements-list {
+    background-color: #f8f9fa;
+    padding: 15px 25px;
+    border-left: 4px solid #3498db;
+    margin: 15px 0;
+  }
+
+  .bonus-section {
+    background-color: #fff3cd;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+</style>
+
+<div class="challenge-container">
+  <h2 class="challenge-title">
+    🛡️ 5. Advanced Challenge: Create a Secure Embedded Widget with
+    &lt;iframe&gt; and sandbox
+  </h2>
+  <span class="challenge-level">Level: Advanced</span>
+  <p class="challenge-goal">
+    Goal: Use &lt;iframe&gt; responsibly and securely
+  </p>
+
+  <div class="requirements-list">
+    <h3>📋 Requirements:</h3>
+    <ul>
+      <li>
+        Embed an external page (e.g., a YouTube video or Google Maps) using
+        &lt;iframe&gt;
+      </li>
+      <li>Apply the following:</li>
+      <ul>
+        <li>Set title, width, and height</li>
+        <li>Use the sandbox attribute with appropriate values</li>
+        <li>Use loading="lazy" and referrerpolicy="no-referrer"</li>
+      </ul>
+    </ul>
+  </div>
+
+  <div class="bonus-section">
+    <strong>Bonus:</strong> Make the iframe responsive using CSS and
+    aspect-ratio or padding technique.
+  </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Embedded Widget</title>
+    <link
+      rel="icon"
+      href="../images/icons8-html-filetype-48.png"
+      type="image/x-icon"
+    />
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .responsive-iframe-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        /* 16:9 Aspect Ratio */
+      }
+
+      .responsive-iframe-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .back-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="../index.html" class="back-button">← Back to Index</a>
+
+      <h1>Secure Embedded Widget Example</h1>
+
+      <div class="responsive-iframe-wrapper">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/MSICFljRcb4?si=gpNVJZVGNS9N59Ra"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+           loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="responsive-iframe-wrapper" style="margin-top: 20px">
+        <iframe
+          title="Google Maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596552044!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1647043435559!5v1647043435559"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          sandbox="allow-scripts allow-same-origin"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

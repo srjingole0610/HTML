@@ -1,0 +1,157 @@
+<!-- 🎥 4. Media Challenge: Embed Audio and Video Players
+Level: Advanced
+Goal: Use <audio> and <video> elements with fallback support
+
+📋 Requirements:
+Embed:
+
+A sample MP3 file using the <audio> element with controls
+
+A sample MP4 video using <video> with:
+
+controls, poster, autoplay (muted), and loop
+
+Provide a fallback text message if media is not supported by the browser
+
+Bonus: Use preload attribute and explain its values (none, metadata, auto). -->
+
+
+<style>
+    .challenge-container {
+        background-color: #f8f9fa;
+        border-left: 4px solid #007bff;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+
+    .challenge-title {
+        color: #0056b3;
+        margin-top: 0;
+        font-size: 1.5em;
+    }
+
+    .challenge-level {
+        display: inline-block;
+        background-color: #28a745;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        margin: 10px 0;
+    }
+
+    .challenge-goal {
+        color: #495057;
+        font-style: italic;
+        margin: 10px 0;
+    }
+
+    .requirements-list {
+        color: #212529;
+        margin: 15px 0;
+        padding-left: 20px;
+    }
+
+    .bonus-section {
+        background-color: #fff3cd;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 15px;
+    }
+
+    body {
+        line-height: 1.6;
+        color: #333;
+        background-color: #f0f2f5;
+    }
+</style>
+
+<div class="challenge-container">
+    <h1 class="challenge-title">🎥 4. Media Challenge: Embed Audio and Video Players</h1>
+    <span class="challenge-level">Level: Advanced</span>
+    <p class="challenge-goal">Goal: Use &lt;audio&gt; and &lt;video&gt; elements with fallback support</p>
+    
+    <h3>📋 Requirements:</h3>
+    <ul class="requirements-list">
+        <li>Embed a sample MP3 file using the &lt;audio&gt; element with controls</li>
+        <li>Embed a sample MP4 video using &lt;video&gt; with:
+            <ul>
+                <li>controls</li>
+                <li>poster</li>
+                <li>autoplay (muted)</li>
+                <li>loop</li>
+            </ul>
+        </li>
+        <li>Provide a fallback text message if media is not supported by the browser</li>
+    </ul>
+
+    <div class="bonus-section">
+        <strong>Bonus:</strong> Use preload attribute and explain its values (none, metadata, auto)
+    </div>
+</div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Challenge</title>
+    <link rel="icon" href="../images/icons8-html-filetype-48.png" type="image/x-icon" >
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+        .media-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-btn">← Back to Index</a>
+
+    <div class="media-container">
+        <h2>Audio Player</h2>
+        <audio controls preload="metadata">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p><small>Preload values explanation:<br>
+            - none: Don't preload anything<br>
+            - metadata: Only preload metadata (duration, dimensions, etc.)<br>
+            - auto: Preload the entire file</small></p>
+    </div>
+
+    <div class="media-container">
+        <h2>Video Player</h2>
+        <video 
+            controls 
+            autoplay 
+            muted 
+            loop 
+            preload="metadata"
+            poster="https://picsum.photos/800/450"
+            width="100%">
+            <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+</body>
+</html>

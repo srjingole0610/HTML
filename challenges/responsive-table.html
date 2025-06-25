@@ -1,0 +1,317 @@
+<!-- 📊 HTML Table Challenge: Build a Student Grades Report Table
+Level: Intermediate
+Goal: Learn how to use HTML table elements, including semantic grouping, headers, and merging cells.
+
+📋 Challenge Requirements:
+Create an HTML page that displays a student grade report using a well-structured table.
+
+The table should:
+
+1. Include the following columns:
+Student ID
+
+Name
+
+Subject
+
+Marks Obtained
+
+Grade
+
+Remarks
+
+2. Use proper HTML table structure:
+<table> to define the table
+
+<thead>, <tbody>, and <tfoot> to organize the sections
+
+<th> for headers and <td> for data cells
+
+Use at least one colspan and rowspan in a meaningful way (e.g., merge header cells or repeated student names)
+
+3. Add a caption:
+Use the <caption> tag to add the title: "Student Performance Report - 2025"
+
+4. Use HTML attributes or CSS for styling:
+Add border via inline style or CSS
+
+Add cell padding and alternate row colors (zebra stripes)
+
+📌 Bonus (Optional):
+Add a footer row showing the average score or number of students
+
+Add a tooltip (title attribute) on each grade column to explain what it means (e.g., "A: Excellent")
+
+🧩 Example Output Layout (Structure)
+Student ID	Name	Subject	Marks	Grade	Remarks
+1001	John Smith	Mathematics	85	A	Good work
+Science	78	B	Satisfactory
+1002	Jane Doe	English	92	A+	Excellent -->
+
+
+<div class="challenge-container">
+    <h1 class="challenge-title">📊 HTML Table Challenge: Build a Student Grades Report Table</h1>
+    <div class="challenge-metadata">
+        <p><strong>Level:</strong> Intermediate</p>
+        <p><strong>Goal:</strong> Learn how to use HTML table elements, including semantic grouping, headers, and merging cells.</p>
+    </div>
+
+    <div class="challenge-requirements">
+        <h2>📋 Challenge Requirements:</h2>
+        <p>Create an HTML page that displays a student grade report using a well-structured table.</p>
+        
+        <h3>The table should:</h3>
+        <ol>
+            <li>
+                <p>Include the following columns:</p>
+                <ul>
+                    <li>Student ID</li>
+                    <li>Name</li>
+                    <li>Subject</li>
+                    <li>Marks Obtained</li>
+                    <li>Grade</li>
+                    <li>Remarks</li>
+                </ul>
+            </li>
+            <li>
+                <p>Use proper HTML table structure:</p>
+                <ul>
+                    <li>&lt;table&gt; to define the table</li>
+                    <li>&lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt; to organize the sections</li>
+                    <li>&lt;th&gt; for headers and &lt;td&gt; for data cells</li>
+                    <li>Use at least one colspan and rowspan in a meaningful way (e.g., merge header cells or repeated student names)</li>
+                </ul>
+            </li>
+            <li>
+                <p>Add a caption:</p>
+                <ul>
+                    <li>Use the &lt;caption&gt; tag to add the title: "Student Performance Report - 2025"</li>
+                </ul>
+            </li>
+            <li>
+                <p>Use HTML attributes or CSS for styling:</p>
+                <ul>
+                    <li>Add border via inline style or CSS</li>
+                    <li>Add cell padding and alternate row colors (zebra stripes)</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="challenge-bonus">
+        <h2>📌 Bonus (Optional):</h2>
+        <ul>
+            <li>Add a footer row showing the average score or number of students</li>
+            <li>Add a tooltip (title attribute) on each grade column to explain what it means (e.g., "A: Excellent")</li>
+        </ul>
+    </div>
+
+    <div class="example-output">
+        <h2>🧩 Example Output Layout (Structure)</h2>
+        <pre>
+Student ID    Name        Subject     Marks   Grade   Remarks
+1001          John Smith  Mathematics 85      A       Good work
+                         Science     78      B       Satisfactory
+1002          Jane Doe    English     92      A+      Excellent
+        </pre>
+    </div>
+</div>
+
+<style>
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f7fa;
+        line-height: 1.6;
+    }
+
+    .challenge-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .challenge-title {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .challenge-metadata {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .challenge-requirements h2,
+    .challenge-bonus h2,
+    .example-output h2 {
+        color: #2c3e50;
+        margin-top: 25px;
+    }
+
+    .challenge-requirements ol {
+        padding-left: 20px;
+    }
+
+    .challenge-requirements ul,
+    .challenge-bonus ul {
+        list-style-type: none;
+        padding-left: 20px;
+    }
+
+    .challenge-requirements ul li::before,
+    .challenge-bonus ul li::before {
+        content: "•";
+        color: #3498db;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .example-output pre {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-family: monospace;
+        white-space: pre;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grades Report</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        tfoot {
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+
+        @media screen and (max-width: 600px) {
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-button">← Back to Index</a>
+    
+    <div class="table-container">
+        <table>
+            <caption>Student Performance Report - 2025</caption>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                    <th title="A+: Outstanding (95-100)&#10;A: Excellent (85-94)&#10;B: Good (75-84)&#10;C: Average (65-74)&#10;D: Below Average (Below 65)">Grade</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">1001</td>
+                    <td rowspan="2">John Smith</td>
+                    <td>Mathematics</td>
+                    <td>85</td>
+                    <td title="Excellent Performance">A</td>
+                    <td>Good work</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>78</td>
+                    <td title="Good Performance">B</td>
+                    <td>Satisfactory</td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>Jane Doe</td>
+                    <td>English</td>
+                    <td>92</td>
+                    <td title="Outstanding Performance">A+</td>
+                    <td>Excellent</td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>Mike Johnson</td>
+                    <td>Physics</td>
+                    <td>88</td>
+                    <td title="Excellent Performance">A</td>
+                    <td>Very good</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Average Score:</td>
+                    <td>85.75</td>
+                    <td colspan="2">Total Students: 3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
