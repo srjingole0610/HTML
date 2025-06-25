@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guide to HTML block-level elements with examples">
+    <meta name="keywords" content="HTML, block elements, web development, layout">
+    <title>HTML Block-Level Elements Guide</title>
+    <link rel="icon" type="image/x-icon" href="images/icons8-html-filetype-48.png">
+    <style>
+        /* Basic styling for demonstration */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+        .block-example {
+            border: 1px solid #e0e0e0;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .back-button {
+ display: inline-block;
+            padding: 12px 24px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+        .theory-section {
+            background-color: #ffffff;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #34495e;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        /* Code example styling */
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #e9ecef;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+        }
+        /* List styling */
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Index</a>
+    
+    <header>
+        <h1>Understanding HTML Block-Level Elements</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#theory">Theory</a></li>
+                <li><a href="#common-elements">Common Elements</a></li>
+                <li><a href="#examples">Examples</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="introduction"></section>
+            <h2>What are Block-Level Elements?</h2>
+            <p>Block-level elements occupy the full available width and create new lines before and after themselves. They are structural elements used for layout and content organization.</p>
+        </section>
+        <section id="theory" class="theory-section">
+            <h2>In-Depth Theory of Block-Level Elements</h2>
+            <h3>Key Characteristics:</h3>
+            <ul>
+                <li><strong>Width Behavior:</strong> Block elements stretch to fill their container's full width by default</li>
+                <li><strong>Line Breaks:</strong> Always start on a new line and force subsequent content to a new line</li>
+                <li><strong>Height and Margins:</strong> Respect height, margin-top, and margin-bottom properties</li>
+                <li><strong>Box Model:</strong> Follow the complete box model (content, padding, border, margin)</li>
+            </ul>
+            <h3>Important Concepts:</h3>
+            <ol>
+                <li><strong>Flow Content:</strong> Block elements are part of the normal document flow</li>
+                <li><strong>Nesting:</strong> Can contain other block-level and inline elements</li>
+                <li><strong>Document Structure:</strong> Used for major structural elements of a webpage</li>
+                <li><strong>Vertical Stacking:</strong> Elements stack vertically by default</li>
+            </ol>
+            <h3>CSS Behavior:</h3>
+            <p>Block elements can be modified with CSS properties like:</p>
+            <ul>
+                <li>width and height</li>
+                <li>margin and padding</li>
+                <li>border and background</li>
+                <li>display property modifications</li>
+            </ul>
+        </section>
+        <section id="common-elements">
+            <h2>Common Block-Level Elements</h2>
+            <div class="block-example">
+                <h3>Heading Elements</h3>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+            </div>
+            <div class="block-example">
+                <h3>Paragraph and Text Elements</h3>
+                <p>This is a paragraph element</p>
+                <blockquote>This is a blockquote element</blockquote>
+                <pre>This is a preformatted text element</pre>
+            </div>
+            <div class="block-example">
+                <h3>List Elements</h3>
+                <ul>
+                    <li>Unordered list item</li>
+                </ul>
+                <ol>
+                    <li>Ordered list item</li>
+                </ol>
+                <dl>
+                    <dt>Definition term</dt>
+                    <dd>Definition description</dd>
+                </dl>
+            </div>
+            <div class="block-example">
+                <h3>Semantic Elements</h3>
+                <article>Article element</article>
+                <aside>Aside element</aside>
+                <figure>
+                    <figcaption>Figure and figcaption elements</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="examples">
+            <h2>Other Block Elements</h2>
+            <div class="block-example">
+                <address>Address element</address>
+                <form>Form element</form>
+                <hr>
+                <table>
+                    <tr>
+                        <td>Table element</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Other block elements include: div, main, section, header, footer, nav, video, canvas, fieldset, and more.</p>
+    </footer>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML inline elements, their attributes and usage">
+    <meta name="keywords" content="HTML, inline elements, span, a, em, strong, web development">
+    <link rel="icon" type="image/x-icon" href="images/icons8-html-filetype-48.png">
+    <title>HTML Inline Elements Guide</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        /* Example box styling */
+        .example-box {
+            background-color: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .example-box h3 {
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+
+        /* Theory box styling */
+        .theory-box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #007bff;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Back button styling */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #444;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+            color: #e4e4e4;
+            text-decoration: none;
+        }
+
+        /* List styling */
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        /* Code element styling */
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #e74c3c;
+        }
+
+        /* Link styling */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+      
+
+        /* Section spacing */
+        section {
+            margin: 40px 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .example-box, .theory-box {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn back-btn-hover">← Back to Home</a>
+
+    <h1>HTML Inline Elements Guide</h1>
+
+    <section>
+        <h2>What are Inline Elements?</h2>
+        <div class="theory-box">
+            <h3>Core Concepts</h3>
+            <p>Inline elements are fundamental HTML components that follow these key principles:</p>
+            <ul>
+                <li>Only take up as much width as necessary</li>
+                <li>Do not start on a new line</li>
+                <li>Cannot contain block-level elements</li>
+            </ul>
+            
+            <h3>Box Model Behavior</h3>
+            <p>Inline elements have unique box model characteristics:</p>
+            <ul>
+                <li>Width and height properties have no effect</li>
+                <li>Vertical margins are not respected</li>
+                <li>Horizontal margins and padding are respected</li>
+                <li>Cannot be floated without changing their display value</li>
+            </ul>
+
+            <h3>Flow Characteristics</h3>
+            <p>Understanding how inline elements flow in a document:</p>
+            <ul>
+                <li>Flow with text content, like words in a sentence</li>
+                <li>Wrap naturally with text when reaching container boundaries</li>
+                <li>Respect white-space properties of their parent elements</li>
+                <li>Maintain baseline alignment with surrounding text</li>
+            </ul>
+
+            <h3>Line Height Considerations</h3>
+            <p>Inline elements are affected by:</p>
+            <ul>
+                <li>The line-height property of their parent container</li>
+                <li>Vertical-align property for positioning relative to the text baseline</li>
+                <li>Font metrics of the text they contain or surround</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Common Inline Elements with Examples</h2>
+
+        <div class="example-box">
+            <h3>1. &lt;span&gt; Element</h3>
+            <p>This is a <span style="color: red;">colored span</span> element.</p>
+            <div class="theory-box">
+                <p>The span element is the most versatile inline container, used primarily for:</p>
+                <ul>
+                    <li>Applying styles to specific text portions</li>
+                    <li>Adding hooks for JavaScript functionality</li>
+                    <li>Grouping inline elements for common styling</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>2. &lt;a&gt; Element (Links)</h3>
+            <p>Visit <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">this website</a></p>
+            <div class="theory-box">
+                <p>The anchor element is crucial for web navigation and has special characteristics:</p>
+                <ul>
+                    <li>Can contain other inline elements</li>
+                    <li>Supports interactive states (hover, active, visited)</li>
+                    <li>Has built-in accessibility features</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>3. Text Formatting Elements</h3>
+            <p>
+                <strong>Bold text</strong><br>
+                <em>Italic text</em><br>
+                <mark>Highlighted text</mark><br>
+                <sub>Subscript</sub> and <sup>Superscript</sup><br>
+                <code>Code element</code>
+            </p>
+            <div class="theory-box">
+                <p>Semantic meaning of text formatting elements:</p>
+                <ul>
+                    <li><strong>&lt;strong&gt;</strong> - Indicates strong importance</li>
+                    <li><strong>&lt;em&gt;</strong> - Indicates emphasis</li>
+                    <li><strong>&lt;mark&gt;</strong> - Represents highlighted reference text</li>
+                    <li><strong>&lt;sub&gt;</strong> and <strong>&lt;sup&gt;</strong> - For mathematical and chemical notations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h3>4. &lt;img&gt; Element</h3>
+            <img src="images/hong-zhao-eGnfcEfkP04-unsplash.jpg" alt="Sample image" width="100" height="100" loading="lazy">
+            <div class="theory-box">
+                <p>Special characteristics of inline images:</p>
+                <ul>
+                    <li>Replaced element with intrinsic dimensions</li>
+                    <li>Can affect line height and baseline alignment</li>
+                    <li>Supports width/height unlike other inline elements</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Important Attributes for Inline Elements</h2>
+        <div class="theory-box">
+            <p>Understanding attribute behavior and impact:</p>
+            <ul>
+                <li><code>class</code> - For CSS styling and JavaScript selection</li>
+                <li><code>id</code> - Unique identifier for an element</li>
+                <li><code>style</code> - Inline CSS styling</li>
+                <li><code>title</code> - Additional information (tooltip)</li>
+                <li><code>lang</code> - Specifies language of element content</li>
+                <li><code>dir</code> - Text direction (ltr/rtl)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>SEO and Performance Best Practices</h2>
+        <div class="theory-box">
+            <p>Advanced considerations for inline elements:</p>
+            <ul>
+                <li>Use semantic inline elements when appropriate (<code>&lt;em&gt;</code> instead of <code>&lt;i&gt;</code>)</li>
+                <li>Add meaningful alt text to images</li>
+                <li>Use lazy loading for images</li>
+                <li>Implement proper anchor text for links</li>
+                <li>Use rel="noopener noreferrer" for external links</li>
+            </ul>
+            <p>Impact on Performance:</p>
+            <ul>
+                <li>Excessive inline elements can increase DOM size</li>
+                <li>Inline styles can affect style sheet efficiency</li>
+                <li>Proper use can improve content accessibility</li>
+                <li>Strategic placement affects rendering performance</li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+</html>
