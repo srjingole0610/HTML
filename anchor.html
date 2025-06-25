@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor Tag</title>
+</head>
+<body>
+    <h1>Anchor Tag</h1>
+    <!-- The <a> tag defines a hyperlink -->
+    <!-- href attribute specifies the URL/destination of the link -->
+    <!-- Common attributes:
+         - href: URL/destination
+         - target: specifies where to open the link (_blank, _self, _parent, _top)
+         - title: tooltip text on hover
+         - download: specifies file should be downloaded
+         - rel: relationship between current and linked document
+    -->
+
+    <!-- Understanding URLs -->
+    <h2>Types of URLs</h2>
+    <!-- Absolute URLs: Complete web address including protocol and domain -->
+    <div>
+        <h3>Absolute URLs (Complete web address)</h3>
+        <p><a href="https://www.example.com">Full website address</a></p>
+        <p><a href="https://www.example.com/about/team.html">Deep page link</a></p>
+    </div>
+
+    <!-- Relative URLs: Links relative to current page location -->
+    <div>
+        <h3>Relative URLs (Links relative to current page)</h3>
+        <p><a href="about.html">Same folder file</a></p>
+        <p><a href="./images/photo.jpg">File in subfolder</a></p>
+        <p><a href="../index.html">File in parent folder</a></p>
+    </div>
+
+    <!-- Basic link to external website -->
+    <p><a href="https://www.example.com">Basic External Link</a></p>
+
+    <!-- Link that opens in new tab -->
+    <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Opens in New Tab</a></p>
+
+    <!-- Link to email -->
+    <p><a href="mailto:example@email.com">Send Email</a></p>
+
+    <!-- Link to phone number -->
+    <p><a href="tel:+1234567890">Call Us</a></p>
+
+    <!-- Link to internal page -->
+    <p><a href="about.html">Internal Page Link</a></p>
+
+    <!-- Link to specific section using ID -->
+    <p><a href="#section1">Jump to Section</a></p>
+
+    <!-- Link with title attribute -->
+    <p><a href="https://www.example.com" title="Visit Example Website">Hover to See Title</a></p>
+
+    <!-- Link with custom styling -->
+    <p><a href="https://www.example.com" style="color: red; text-decoration: none;">Styled Link</a></p>
+
+    <!-- Download link -->
+    <p><a href="files/document.pdf" download>Download PDF</a></p>
+
+    <!-- Link with image -->
+    <p><a href="https://www.example.com">
+        <img src="image.jpg" alt="Click Me" width="100">
+    </a></p>
+
+    <!-- Disabled link -->
+    <p><a href="javascript:void(0)" style="pointer-events: none; color: gray;">Disabled Link</a></p>
+
+    <!-- Examples of rel attribute -->
+    <div>
+        <p><a href="https://www.example.com" rel="nofollow">No Follow Link</a></p>
+        <p><a href="https://www.example.com" rel="bookmark">Bookmark Link</a></p>
+        <p><a href="https://www.example.com" rel="author">Author Link</a></p>
+        <p><a href="https://www.example.com" rel="license">License Link</a></p>
+        <p><a href="https://www.example.com" rel="prev">Previous Page</a></p>
+        <p><a href="https://www.example.com" rel="next">Next Page</a></p>
+        <p><a href="https://www.example.com" rel="alternate">Alternate Version</a></p>
+    </div>
+
+    <!-- Section for anchor target -->
+    <div id="section1">
+        <h2>Section 1</h2>
+        <p>This is the section referenced by the anchor link above.</p>
+    </div>
+
+    <!-- Relative path examples -->
+    <div>
+        <p><a href="./same-folder.html">Same Folder</a></p>
+        <p><a href="../parent-folder.html">Parent Folder</a></p>
+        <p><a href="subfolder/child.html">Child Folder</a></p>
+    </div>
+</body>
+</html>

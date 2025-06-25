@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Entities</title>
+    <style>
+        .example-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .entity-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .entity-table th, .entity-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding HTML Entities</h1>
+
+    <!-- Introduction Section -->
+    <section>
+        <h2>What are HTML Entities?</h2>
+        <p>HTML entities are special characters that are not part of the standard ASCII character set or characters that have special meaning in HTML. They are used to:</p>
+        <ul>
+            <li>Display reserved characters that have special meaning in HTML (like &lt; and &gt;)</li>
+            <li>Show characters that are difficult to type on a keyboard</li>
+            <li>Represent symbols and special characters across different character encodings</li>
+        </ul>
+    </section>
+
+    <!-- Entity Syntax Section -->
+    <section>
+        <h2>Entity Syntax</h2>
+        <div class="example-box">
+            <p>HTML entities can be written in three formats:</p>
+            <ol>
+                <li>Named entity: <code>&amp;entityname;</code></li>
+                <li>Decimal reference: <code>&amp;#decimalnumber;</code></li>
+                <li>Hexadecimal reference: <code>&amp;#xhexnumber;</code></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Common Entities Table -->
+    <section>
+        <h2>Common HTML Entities</h2>
+        <table class="entity-table">
+            <tr>
+                <th>Character</th>
+                <th>Entity Name</th>
+                <th>Decimal</th>
+                <th>Hexadecimal</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>&amp;lt;</td>
+                <td>&amp;#60;</td>
+                <td>&amp;#x3C;</td>
+                <td>Less than</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>&amp;gt;</td>
+                <td>&amp;#62;</td>
+                <td>&amp;#x3E;</td>
+                <td>Greater than</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>&amp;amp;</td>
+                <td>&amp;#38;</td>
+                <td>&amp;#x26;</td>
+                <td>Ampersand</td>
+            </tr>
+            <tr>
+                <td>&copy;</td>
+                <td>&amp;copy;</td>
+                <td>&amp;#169;</td>
+                <td>&amp;#xA9;</td>
+                <td>Copyright</td>
+            </tr>
+            <tr>
+                <td>&reg;</td>
+                <td>&amp;reg;</td>
+                <td>&amp;#174;</td>
+                <td>&amp;#xAE;</td>
+                <td>Registered trademark</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Special Characters Section -->
+    <section>
+        <h2>Special Characters and Symbols</h2>
+        <div class="example-box">
+            <h3>Currency Symbols</h3>
+            <p>&euro; - Euro (&amp;euro;)</p>
+            <p>&pound; - Pound (&amp;pound;)</p>
+            <p>&cent; - Cent (&amp;cent;)</p>
+            <p>&yen; - Yen (&amp;yen;)</p>
+
+            <h3>Mathematical Symbols</h3>
+            <p>&times; - Multiplication (&amp;times;)</p>
+            <p>&divide; - Division (&amp;divide;)</p>
+            <p>&plusmn; - Plus-minus (&amp;plusmn;)</p>
+            <p>&ne; - Not equal (&amp;ne;)</p>
+        </div>
+    </section>
+
+    <!-- Best Practices -->
+    <section>
+        <h2>Best Practices</h2>
+        <ul>
+            <li>Always use HTML entities for special characters to ensure proper rendering across different browsers and character encodings</li>
+            <li>Named entities are more readable and maintainable than numeric references</li>
+            <li>Use UTF-8 encoding in your HTML documents to support a wider range of characters directly</li>
+            <li>Remember to encode special characters in attributes as well as content</li>
+        </ul>
+    </section>
+
+</body>
+</html>

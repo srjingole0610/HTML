@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding HTML iframes</title>
+    <!-- Security headers for iframe protection -->
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://trusted-site.com">
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        /* Theory section styling */
+        #theory {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        #theory h3 {
+            color: #e74c3c;
+            margin-top: 20px;
+        }
+
+        #theory ul {
+            padding-left: 20px;
+        }
+
+        #theory li {
+            margin: 10px 0;
+        }
+
+        /* Examples section styling */
+        section:not(#theory) {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        /* Responsive iframe wrapper */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* iframe styling */
+        iframe {
+            border: 2px solid #bdc3c7;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            iframe {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML iframe Theory and Examples</h1>
+
+    <!-- Theory Section -->
+    <section id="theory">
+        <h2>Understanding iframes</h2>
+        <article>
+            <h3>What is an iframe?</h3>
+            <p>An iframe (Inline Frame) is an HTML element that allows you to embed another HTML document within the current document. It creates a rectangular frame that can display external content like web pages, videos, or other media.</p>
+            
+            <h3>Key iframe Attributes</h3>
+            <ul>
+                <li><strong>src</strong>: Specifies the URL of the page to embed</li>
+                <li><strong>width & height</strong>: Define the dimensions of the frame</li>
+                <li><strong>sandbox</strong>: Applies extra restrictions on content that can be shown in the frame</li>
+                <li><strong>allow</strong>: Specifies which features are allowed in the frame (camera, microphone, etc.)</li>
+                <li><strong>loading</strong>: Controls how the iframe should be loaded (lazy or eager)</li>
+                <li><strong>referrerpolicy</strong>: Specifies which referrer information to send</li>
+                <li><strong>srcdoc</strong>: Specifies inline HTML content to display</li>
+                <li><strong>title</strong>: Provides accessible description for screen readers</li>
+            </ul>
+
+            <h3>Security Considerations</h3>
+            <p>iframes can pose security risks if not properly configured. Best practices include:</p>
+            <ul>
+                <li>Using the sandbox attribute to restrict capabilities</li>
+                <li>Implementing Content Security Policy (CSP)</li>
+                <li>Setting appropriate referrer policies</li>
+                <li>Only embedding trusted sources</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- Basic iframe example -->
+    <section>
+        <h2>Basic iframe</h2>
+        <iframe src="https://example.com" width="600" height="400" title="Example iframe">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </section>
+
+    <!-- Responsive iframe with wrapper -->
+    <section>
+        <h2>Responsive iframe</h2>
+        <div class="iframe-container">
+            <iframe src="https://www.wikipedia.org/" title="Responsive video player"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Sandbox example -->
+    <section>
+        <h2>Sandboxed iframe</h2>
+        <iframe src="https://external-content.com" sandbox="allow-same-origin allow-scripts allow-forms" loading="lazy"
+            referrerpolicy="no-referrer" title="Sandboxed content" width="100%" height="300">
+        </iframe>
+    </section>
+
+    <!-- iframe with srcdoc -->
+    <section>
+        <h2>Inline HTML Content</h2>
+        <iframe srcdoc="<h1>Hello World!</h1><p>This is inline HTML content</p>" title="Inline content example"
+            width="300" height="150">
+        </iframe>
+    </section>
+
+    <!-- Cross-origin iframe with security features -->
+    <section>
+        <h2>Secure Cross-origin iframe</h2>
+        <iframe src="https://trusted-site.com" title="Secure external content" width="500" height="300"
+            sandbox="allow-scripts" referrerpolicy="no-referrer-when-downgrade" loading="lazy" importance="low"
+            csp="frame-ancestors 'self'">
+        </iframe>
+    </section>
+
+    <!-- iframe with loading attribute -->
+    <section>
+        <h2>Loading Attribute</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5ccq_nLHneE?si=_NiMB-kFePbKGkKa"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy">
+        </iframe>
+    </section>
+</body>
+
+</html>
