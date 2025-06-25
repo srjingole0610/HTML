@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables Tutorial</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        /* Theory section styles */
+        .theory {
+            background-color: #f8f9fa;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .theory h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .theory h3 {
+            color: #3498db;
+            margin-top: 20px;
+        }
+
+        .theory ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .theory li {
+            margin: 10px 0;
+            padding: 8px;
+            background-color: white;
+            border-radius: 4px;
+            border-left: 4px solid #3498db;
+        }
+
+        .theory p {
+            line-height: 1.6;
+            color: #444;
+            margin: 15px 0;
+        }
+
+        .theory .note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:hover {
+            background-color: #e9ecef;
+        }
+
+        tfoot {
+            background-color: #f1f1f1;
+            font-weight: bold;
+        }
+
+        /* Example sections */
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+
+        /* Complex table specific styles */
+        .complex-table th {
+            background-color: #2980b9;
+        }
+
+        /* Attributes example table */
+        .attributes-table td {
+            background-color: #ebf5fb;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Tables Tutorial</h1>
+
+    <!-- Theory Section -->
+    <div class="theory">
+        <h2>Understanding HTML Tables</h2>
+        <p>HTML tables are powerful tools for displaying data in a structured format. They organize content into rows and columns, making it easier to present and compare information.</p>
+
+        <h3>Basic Table Tags:</h3>
+        <ul>
+            <li><strong>&lt;table&gt;</strong> - Defines an HTML table. This is the container for all table content.</li>
+            <li><strong>&lt;tr&gt;</strong> - Defines a table row. Each tr element creates a new row in the table.</li>
+            <li><strong>&lt;th&gt;</strong> - Defines a table header cell. By default, text inside th is bold and centered.</li>
+            <li><strong>&lt;td&gt;</strong> - Defines a table data cell. These cells contain the actual content of your table.</li>
+            <li><strong>&lt;caption&gt;</strong> - Defines a table caption. It must be inserted immediately after the table tag.</li>
+        </ul>
+
+        <div class="note">
+            <strong>Best Practice:</strong> Always use th elements for header cells to improve accessibility and semantic meaning.
+        </div>
+
+        <h3>Table Structure Tags:</h3>
+        <ul>
+            <li><strong>&lt;thead&gt;</strong> - Groups header content. Makes the table structure more organized and helps with styling.</li>
+            <li><strong>&lt;tbody&gt;</strong> - Groups body content. Can have multiple tbody elements in a table for better organization.</li>
+            <li><strong>&lt;tfoot&gt;</strong> - Groups footer content. Always appears at the bottom regardless of where it's placed in the code.</li>
+            <li><strong>&lt;colgroup&gt;</strong> - Specifies properties for table columns. Used with &lt;col&gt; to style entire columns.</li>
+            <li><strong>&lt;col&gt;</strong> - Defines properties for table columns. Can use span attribute to affect multiple columns.</li>
+        </ul>
+
+        <h3>Important Attributes:</h3>
+        <ul>
+            <li><strong>colspan</strong> - Specifies how many columns a cell should span. Useful for creating headers that cover multiple columns.</li>
+            <li><strong>rowspan</strong> - Specifies how many rows a cell should span. Helps in creating complex table layouts.</li>
+            <li><strong>cellpadding</strong> - Specifies the space between cell content and borders. Better controlled with CSS padding.</li>
+            <li><strong>cellspacing</strong> - Specifies the space between cells. Better controlled with CSS border-spacing.</li>
+            <li><strong>border</strong> - Specifies the border width of the table. Better controlled with CSS borders.</li>
+            <li><strong>width</strong> - Sets the width of the table or cells. Better controlled with CSS width property.</li>
+            <li><strong>height</strong> - Sets the height of rows or cells. Better controlled with CSS height property.</li>
+        </ul>
+
+        <h3>Additional Table Features:</h3>
+        <ul>
+            <li><strong>scope</strong> - Attribute for th elements to specify if it's a header for a row or column.</li>
+            <li><strong>headers</strong> - Associates data cells with header cells for better accessibility.</li>
+            <li><strong>axis</strong> - Categorizes cells for better data organization.</li>
+        </ul>
+
+        <div class="note">
+            <strong>Modern Development Note:</strong> While HTML attributes like cellpadding and cellspacing still work, it's recommended to use CSS properties for styling tables in modern web development.
+        </div>
+    </div>
+
+    <!-- Basic Table Structure -->
+    <table>
+        <caption>Employee Information</caption>
+        <colgroup>
+            <col style="background-color: #f2f2f2">
+            <col span="2">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>Developer</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>Designer</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Employees: 2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Table with rowspan and colspan -->
+    <h2>Complex Table Example</h2>
+    <table class="complex-table">
+        <tr>
+            <th rowspan="2">Department</th>
+            <th colspan="2">Schedule</th>
+        </tr>
+        <tr>
+            <th>Morning</th>
+            <th>Afternoon</th>
+        </tr>
+        <tr>
+            <td>IT</td>
+            <td>9 AM</td>
+            <td>2 PM</td>
+        </tr>
+    </table>
+
+    <!-- Table with cellpadding and cellspacing -->
+    <h2>Table Attributes Example</h2>
+    <table class="attributes-table" cellpadding="10" cellspacing="0">
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+        <tr>
+            <td>Cell 3</td>
+            <td>Cell 4</td>
+        </tr>
+    </table>
+</body>
+</html>
