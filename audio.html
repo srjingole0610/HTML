@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML5 audio elements and their usage">
+    <meta name="keywords" content="HTML5 audio, web audio, audio player">
+    <title>HTML5 Audio Tag Tutorial</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Theory section styling */
+        .theory {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Code examples styling */
+        code, pre {
+            background-color: #f8f8f8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #ddd;
+        }
+
+        pre {
+            padding: 15px;
+            overflow-x: auto;
+        }
+
+        /* Headings */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #16a085;
+        }
+
+        /* Lists styling */
+        dl {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        dt {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+
+        dd {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Audio sections */
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Aside styling */
+        aside {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+
+        /* Links */
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Understanding the HTML Audio Tag</h1>
+
+        <!-- Theory Section -->
+        <section class="theory">
+            <h2>HTML Audio Tag Theory</h2>
+            <article>
+                <h3>Introduction</h3>
+                <p>The HTML <code>&lt;audio&gt;</code> tag is used to embed sound content in documents. It was introduced in HTML5 and provides a standard way to embed audio in web pages.</p>
+            </article>
+
+            <article>
+                <h3>Basic Syntax</h3>
+                <pre><code>&lt;audio src="audio-file.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+                <p>The audio tag can be written with a single source using the src attribute, or with multiple &lt;source&gt; elements for different audio formats.</p>
+            </article>
+
+            <article>
+                <h3>Audio Attributes</h3>
+                <dl>
+                    <dt><code>controls</code></dt>
+                    <dd>Adds audio controls, including play, pause, and volume.</dd>
+
+                    <dt><code>autoplay</code></dt>
+                    <dd>Automatically starts playing the audio when page loads. Best practice is to avoid or use with muted.</dd>
+
+                    <dt><code>loop</code></dt>
+                    <dd>Makes the audio play again when finished.</dd>
+
+                    <dt><code>muted</code></dt>
+                    <dd>Sets the default state of audio to muted.</dd>
+
+                    <dt><code>preload</code></dt>
+                    <dd>Specifies if and how the audio should be loaded when the page loads:
+                        <ul>
+                            <li><code>auto</code>: Browser should load the entire audio file</li>
+                            <li><code>metadata</code>: Only load metadata (length, etc.)</li>
+                            <li><code>none</code>: Don't preload anything</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </article>
+
+            <article>
+                <h3>Supported Audio Formats</h3>
+                <ul>
+                    <li><strong>MP3</strong> (.mp3) - Most widely supported format</li>
+                    <li><strong>WAV</strong> (.wav) - Uncompressed audio format</li>
+                    <li><strong>OGG</strong> (.ogg) - Free, open-source format</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Browser Support and Fallbacks</h3>
+                <p>While audio tag is widely supported, it's good practice to:</p>
+                <ul>
+                    <li>Provide multiple source formats</li>
+                    <li>Include fallback content for unsupported browsers</li>
+                    <li>Offer download links as last resort</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- Basic audio player -->
+        <section>
+            <h2>Basic Audio Player</h2>
+            <audio controls>
+                <source src="audio/sample-3s.mp3" type="audio/mpeg">
+                <source src="audio/sample-3s.wav" type="audio/wav">
+                <p>Your browser does not support the audio element.</p>
+            </audio>
+        </section>
+
+        <!-- Autoplay example -->
+        <section>
+            <h2>Autoplay Example (muted for better UX)</h2>
+            <audio controls autoplay muted>
+                <source src="audio/sample-6s.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <!-- Loop example -->
+        <section>
+            <h2>Looping Audio</h2>
+            <audio controls loop>
+                <source src="audio/sample-6s.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <!-- Preload example -->
+        <section>
+            <h2>Preload Audio</h2>
+            <audio controls preload="auto">
+                <source src="audio/sample-3s.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <!-- Audio with multiple fallbacks -->
+        <section>
+            <h2>Multiple Format Support</h2>
+            <audio controls>
+                <source src="audio/sample-4s.mp3" type="audio/mpeg">
+                <source src="audio/sample-4s.wav" type="audio/wav">
+                <source src="audio/sample-3s.ogg" type="audio/ogg">
+                <!-- Download link as final fallback -->
+                <p>
+                    Your browser doesn't support HTML5 audio. Here's a 
+                    <a href="audio/music.mp3" download>link to download</a> 
+                    the audio instead.
+                </p>
+            </audio>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Audio Tag Attributes Reference</h2>
+        <ul>
+            <li><strong>controls</strong> - Shows audio controls (play/pause, volume)</li>
+            <li><strong>autoplay</strong> - Starts playing audio automatically</li>
+            <li><strong>loop</strong> - Repeats audio when finished</li>
+            <li><strong>muted</strong> - Sets audio volume to zero</li>
+            <li><strong>preload</strong> - Specifies how audio should be loaded:
+                <ul>
+                    <li>auto - Load entire audio file</li>
+                    <li>metadata - Load only metadata</li>
+                    <li>none - Don't preload anything</li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>Note: Always provide alternative text or download links for accessibility.</p>
+    </footer>
+</body>
+</html>
