@@ -332,5 +332,89 @@ Web accessibility means that websites, tools, and technologies are designed and 
     - Ensuring proper heading structure
     - Using ARIA (Accessible Rich Internet Applications) attributes where necessary
     - Ensuring keyboard navigability
+    - Testing with assistive technologies
+
+
+## 4. Canvas Element
+
+The `<canvas>` element is used to draw graphics via JavaScript such as lines, shapes, text, and images.
+
+- **Tag**: `<canvas>`
+- **Attributes**: `width`, `height`, `id`
+- **Important**: `<canvas>` is just a placeholder without JavaScript; the rendering is handled using the Canvas API.
+- **Example**:
+  ```html
+  <canvas id="myCanvas" width="200" height="100"></canvas>
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "blue";
+    ctx.fillRect(20, 20, 150, 50);
+  </script>
+  ```
+
+---
+
+## 5. SVG (Scalable Vector Graphics)
+
+`<svg>` is used to define vector-based graphics that scale cleanly at any resolution. Unlike `<canvas>`, it does not require JavaScript for basic shapes.
+
+- **Tags**: `<svg>`, `<circle>`, `<rect>`, `<line>`, `<path>`, `<text>`, etc.
+- **Attributes**: `width`, `height`, `fill`, `stroke`, `cx`, `cy`, `r`, etc.
+- **Example**:
+  ```html
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" fill="green" />
+  </svg>
+  ```
+
+---
+
+## 6. HTML5 APIs
+
+HTML5 introduced many powerful browser APIs to build dynamic, interactive experiences.
+
+### Notable APIs:
+- **Geolocation API**: Get the user's location.
+- **Drag and Drop API**: Add drag-and-drop functionality.
+- **Web Storage API**: Store data locally using `localStorage` and `sessionStorage`.
+- **Canvas API**: Render 2D graphics on `<canvas>`.
+- **History API**: Manipulate browser history.
+- **Media APIs**: Control video and audio.
+- **Fullscreen API**: Allow elements to be displayed fullscreen.
+  
+_Example: Local Storage_
+```html
+<script>
+  localStorage.setItem("username", "JohnDoe");
+  const user = localStorage.getItem("username");
+  console.log(user); // Output: JohnDoe
+</script>
+```
+
+---
+
+## 7. SEO Best Practices (Search Engine Optimization)
+
+SEO helps improve your webpage's visibility in search engine results.
+
+### Key HTML-related SEO practices:
+- Use **semantic elements** (`<header>`, `<article>`, etc.).
+- Add **meta tags** for description and keywords.
+- Use **descriptive title tags**.
+- Add **alt text** to images.
+- Use **heading hierarchy** correctly (`<h1>` to `<h6>`).
+- Ensure **mobile responsiveness** with the viewport meta tag.
+
+_Example:_
+```html
+<head>
+  <title>Learn HTML - Beginner to Advanced</title>
+  <meta name="description" content="Free tutorials to learn HTML from scratch.">
+  <meta name="keywords" content="HTML, HTML5, Learn HTML, Web Development">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+```
+
 
 This summary covers the fundamental HTML tags and concepts demonstrated in the project files. For more in-depth information, refer to the resources in the `README.md` file.
