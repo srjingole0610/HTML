@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for Unicode support -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO meta tags -->
+    <meta name="description" content="Learn about HTML meta tags and their importance in web development">
+    <meta name="keywords" content="HTML, meta tags, SEO, web development">
+    <meta name="author" content="Your Name">
+
+    <!-- Social media meta tags -->
+    <meta property="og:title" content="Understanding HTML Meta Tags">
+    <meta property="og:description" content="Comprehensive guide about HTML meta tags">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com/meta-tags">
+
+    <!-- Cache control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Refresh page after 30 seconds (example) -->
+    <meta http-equiv="refresh" content="30">
+
+    <!-- Mobile theme color -->
+    <meta name="theme-color" content="#4285f4">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/icons8-html-filetype-48.png" type="image/x-icon">
+
+    <title>Understanding HTML Meta Tags</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .back-button {
+            padding: 12px 24px;
+            background-color: #4285f4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #3367d6;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        article {
+            background-color: white;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        article:hover {
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            margin: 15px 0;
+            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #e9ecef;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin: 15px 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Index</a>
+    
+    <h1>Meta Tags in HTML</h1>
+    <p>Meta tags are crucial HTML elements that provide metadata about your webpage. They help with SEO, social sharing, character encoding, and mobile responsiveness.</p>
+
+    <article>
+        <h2>Character Encoding (charset)</h2>
+        <p>The UTF-8 charset meta tag ensures proper encoding of special characters and symbols across different languages and systems:</p>
+        <code>&lt;meta charset="UTF-8"&gt;</code>
+    </article>
+
+    <article>
+        <h2>Viewport Settings</h2>
+        <p>The viewport meta tag controls how your website appears on mobile devices:</p>
+        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+        <p>- width=device-width: Sets the width of the page to follow the screen-width of the device<br>
+        - initial-scale=1.0: Sets the initial zoom level when the page is first loaded</p>
+    </article>
+
+    <article>
+        <h2>SEO Meta Tags</h2>
+        <p>These tags help search engines understand and rank your page:</p>
+        <ul>
+            <li><strong>Description:</strong> Provides a brief summary of the page content (155-160 characters recommended)</li>
+            <li><strong>Keywords:</strong> Although less important now, these help categorize your page content</li>
+            <li><strong>Author:</strong> Specifies the page's author</li>
+        </ul>
+    </article>
+
+    <article>
+        <h2>Open Graph Meta Tags</h2>
+        <p>Open Graph (og) tags control how your page appears when shared on social media:</p>
+        <ul>
+            <li><strong>og:title:</strong> The title displayed when shared</li>
+            <li><strong>og:description:</strong> The description shown in social media previews</li>
+            <li><strong>og:image:</strong> The image displayed in social media shares</li>
+            <li><strong>og:url:</strong> The canonical URL for the page</li>
+        </ul>
+    </article>
+
+    <article>
+        <h2>Cache Control</h2>
+        <p>These meta tags control how browsers cache your page:</p>
+        <ul>
+            <li><strong>Cache-Control:</strong> Directs browsers not to cache the page</li>
+            <li><strong>Pragma:</strong> Legacy cache control for HTTP/1.0 compatibility</li>
+            <li><strong>Expires:</strong> Sets when the page cache should expire</li>
+        </ul>
+    </article>
+
+    <article>
+        <h2>Page Refresh</h2>
+        <p>The refresh meta tag automatically reloads the page after a specified time:</p>
+        <code>&lt;meta http-equiv="refresh" content="30"&gt;</code>
+        <p>In this example, the page refreshes every 30 seconds</p>
+    </article>
+
+    <article>
+        <h2>Theme Color</h2>
+        <p>The theme-color meta tag sets the color of the browser's UI elements on mobile devices:</p>
+        <code>&lt;meta name="theme-color" content="#4285f4"&gt;</code>
+        <p>This affects elements like the address bar in mobile browsers</p>
+    </article>
+
+    <article>
+        <h2>Favicon</h2>
+        <p>While not a meta tag, the favicon link defines the icon shown in the browser tab:</p>
+        <code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>
+    </article>
+</body>
+</html>
