@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML5 semantic elements and their proper usage for better SEO and accessibility">
+    <meta name="keywords" content="HTML5, semantic tags, web accessibility, SEO">
+    <meta name="author" content="Your Name">
+    <title>HTML5 Semantic Elements Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: #ecf0f1;
+            margin-bottom: 2rem;
+        }
+
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        article {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        #semantic-theory article {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+
+        dt {
+            font-family: monospace;
+            background-color: #e8e8e8;
+            padding: 0.5rem;
+            margin-top: 1rem;
+            border-radius: 4px;
+        }
+
+        dd {
+            margin-left: 1rem;
+            padding: 0.5rem;
+        }
+
+        aside {
+            background-color: #f0f8ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        fieldset {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Index</a>
+    <!-- Header section with main navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#main-content">Main Content</a></li>
+                <li><a href="#article-section">Articles</a></li>
+                <li><a href="#semantic-theory">Semantic Theory</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main id="main-content">
+        <!-- Hero section -->
+        <section class="hero">
+            <h1>Understanding HTML5 Semantic Elements</h1>
+            <p>Learn how to structure your web content meaningfully</p>
+        </section>
+
+        <!-- Article section with multiple articles -->
+        <section id="article-section">
+            <h2>Semantic HTML Examples</h2>
+            
+            <article>
+                <header>
+                    <h3>The Importance of Semantic HTML</h3>
+                    <time datetime="2024-03-15">March 15, 2024</time>
+                </header>
+                <p>Semantic HTML provides meaning to web content structure...</p>
+                <figure>
+                    <img src="images/semantic.png" alt="Semantic HTML Structure Diagram">
+                    <figcaption>Visual representation of semantic HTML structure</figcaption>
+                </figure>
+            </article>
+
+            <!-- Semantic Theory Section -->
+            <section id="semantic-theory">
+                <h2>Deep Dive into Semantic Elements</h2>
+                
+                <article>
+                    <h3>Structural Semantic Elements</h3>
+                    <dl>
+                        <dt>&lt;header&gt;</dt>
+                        <dd>Represents introductory content, typically containing navigation and branding elements. Can be used multiple times in a document for different sections.</dd>
+                        
+                        <dt>&lt;nav&gt;</dt>
+                        <dd>Defines a section of navigation links. Best used for major navigation blocks. Improves accessibility by helping screen readers identify navigation sections.</dd>
+                        
+                        <dt>&lt;main&gt;</dt>
+                        <dd>Specifies the main content area of a document. Should be unique to the document and exclude content repeated across documents like sidebars and navigation.</dd>
+                        
+                        <dt>&lt;article&gt;</dt>
+                        <dd>Represents a self-contained composition that can be independently distributable or reusable. Perfect for blog posts, news articles, or forum posts.</dd>
+                        
+                        <dt>&lt;section&gt;</dt>
+                        <dd>Defines a thematic grouping of content, typically with a heading. Helps create a logical document structure.</dd>
+                        
+                        <dt>&lt;aside&gt;</dt>
+                        <dd>Contains content tangentially related to the content around it. Commonly used for sidebars or call-out boxes.</dd>
+                        
+                        <dt>&lt;footer&gt;</dt>
+                        <dd>Represents a footer for its nearest sectioning content or sectioning root element. Can contain author info, copyright data, related links, etc.</dd>
+                    </dl>
+                </article>
+
+                <article>
+                    <h3>Text-level Semantic Elements</h3>
+                    <dl>
+                        <dt>&lt;time&gt;</dt>
+                        <dd>Represents time and dates. The datetime attribute helps machines understand the time format.</dd>
+                        
+                        <dt>&lt;mark&gt;</dt>
+                        <dd>Indicates text of specific relevance or importance in a context.</dd>
+                        
+                        <dt>&lt;em&gt;</dt>
+                        <dd>Indicates emphasis with semantic importance, not just italic styling.</dd>
+                        
+                        <dt>&lt;strong&gt;</dt>
+                        <dd>Represents strong importance, seriousness, or urgency.</dd>
+                        
+                        <dt>&lt;cite&gt;</dt>
+                        <dd>Represents a reference to a creative work.</dd>
+                    </dl>
+                </article>
+
+                <article>
+                    <h3>Semantic Attributes</h3>
+                    <dl>
+                        <dt>role</dt>
+                        <dd>Defines the purpose of an element in terms of ARIA landmarks, helping with accessibility.</dd>
+                        
+                        <dt>aria-label</dt>
+                        <dd>Provides a text label for elements that may not have visible text, crucial for screen readers.</dd>
+                        
+                        <dt>lang</dt>
+                        <dd>Specifies the language of an element's content, important for accessibility and SEO.</dd>
+                    </dl>
+                </article>
+            </section>
+
+            <!-- Aside for related content -->
+            <aside>
+                <h4>Related Resources</h4>
+                <ul>
+                    <li><a href="#">SEO Best Practices</a></li>
+                    <li><a href="#">Accessibility Guidelines</a></li>
+                </ul>
+            </aside>
+        </section>
+
+        <!-- Contact form section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <address>
+            Contact us at:<br>
+            Email: <a href="mailto:info@example.com">info@example.com</a><br>
+            Phone: <a href="tel:+1234567890">123-456-7890</a>
+        </address>
+        <small>&copy; 2024 Your Company. All rights reserved.</small>
+    </footer>
+</body>
+</html>
