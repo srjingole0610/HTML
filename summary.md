@@ -6,7 +6,7 @@ This document provides a comprehensive summary of the HTML concepts, tags, eleme
 
 **HTML (HyperText Markup Language)** is the standard language for creating web pages. It describes the structure of a web page using a system of **tags** and **elements**.
 
--   **Tags**: These are the building blocks of HTML. They are keywords surrounded by angle brackets, like `<html>`. Tags usually come in pairs, like `<p>` and `</p>`, marking the beginning and end of an element.
+- **Tags**: These are the building blocks of HTML. They are keywords surrounded by angle brackets, like `<html>`. Tags usually come in pairs, like `<p>` and `</p>`, marking the beginning and end of an element.
 -   **Elements**: An HTML element is everything from the start tag to the end tag, including the content in between. For example, `<p>This is a paragraph.</p>` is a paragraph element.
 -   **Attributes**: Attributes provide additional information about an element and are always specified in the start tag. They usually come in name/value pairs like `name="value"`. For example, in `<a href="https://www.google.com">`, `href` is an attribute.
 
@@ -179,7 +179,7 @@ Void elements are elements in HTML that do not have any content. They don't have
 
 -   **Common Void Elements**:
     -   `<br>`: Inserts a single line break.
-    -   `<hr>`: Represents a thematic break between paragraph-level elements (e.g., a change of scene in a story, or a shift of topic with a section). It is typically displayed as a horizontal rule.
+  - `<hr>`: Represents a thematic break between paragraph-level elements (e.g., a change of scene in a story, or a shift of topic with a section). It is typically displayed as a horizontal rule.
     -   `<img>`: Embeds an image.
     -   `<input>`: An input field.
     -   `<link>`: Links to an external resource (like a stylesheet).
@@ -190,5 +190,147 @@ Void elements are elements in HTML that do not have any content. They don't have
     <hr>
     <p>This is after the horizontal rule.</p>
     ```
+
+### Lists
+
+HTML lists allow you to group a set of related items.
+
+- **Unordered Lists**: Created with the `<ul>` tag, with list items marked by `<li>`.
+- **Ordered Lists**: Created with the `<ol>` tag, with list items marked by `<li>`.
+- **Description Lists**: Created with `<dl>`, with terms in `<dt>` and descriptions in `<dd>`.
+- **Example**:
+    ```html
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+    </ol>
+    ```
+
+### Tables
+
+HTML tables are used to present data in rows and columns.
+
+- **Tags**: `<table>`, `<tr>`, `<th>`, `<td>`, `<caption>`, `<thead>`, `<tbody>`, `<tfoot>`
+- **Example**:
+    ```html
+    <table>
+        <caption>Monthly Savings</caption>
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+    ```
+
+### Block and Inline Elements
+
+- **Block-level Elements**: Always start on a new line and take up the full width available (e.g., `<div>`, `<h1>`-`<h6>`, `<p>`, `<form>`).
+- **Inline Elements**: Do not start on a new line and only take up as much width as necessary (e.g., `<span>`, `<a>`, `<img>`).
+- `<div>`: A block-level container used to group other HTML elements.
+- `<span>`: An inline container used to mark up a part of a text, or a part of a document.
+
+### iFrames
+
+An `<iframe>` is used to embed another document within the current HTML document.
+
+- **Tag**: `<iframe>`
+- **Attributes**: `src`, `width`, `height`, `title`
+- **Example**:
+    ```html
+    <iframe src="https://www.example.com" title="Example Website"></iframe>
+    ```
+
+### Forms
+
+HTML forms are used to collect user input.
+
+- **Tag**: `<form>`
+- **Form Elements**: `<input>`, `<label>`, `<select>`, `<textarea>`, `<button>`
+- **Input Types**: `text`, `password`, `radio`, `checkbox`, `submit`, etc.
+- **Example**:
+    ```html
+    <form action="/submit-form" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <input type="submit" value="Submit">
+    </form>
+    ```
+
+### Audio and Video
+
+HTML provides elements for embedding audio and video content.
+
+- **Tags**: `<audio>`, `<video>`, `<source>`
+- **Attributes**: `src`, `controls`, `autoplay`, `muted`, `loop`
+- **Example**:
+    ```html
+    <audio controls>
+        <source src="audio/sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <video width="320" height="240" controls>
+        <source src="video/sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    ```
+
+### Semantic HTML
+
+Semantic HTML elements clearly describe their meaning to both the browser and the developer. This improves accessibility and SEO.
+
+- **Common Semantic Elements**: `<header>`, `<footer>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`
+- **Example**:
+    ```html
+    <header>
+        <h1>My Website</h1>
+    </header>
+    <nav>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+    </nav>
+    <main>
+        <article>
+            <h2>Article Title</h2>
+            <p>Article content...</p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    ```
+
+### Meta Tags
+
+The `<meta>` tag provides metadata about the HTML document, such as character set, page description, keywords, author, and viewport settings.
+
+- **Usage**: Placed inside the `<head>` element.
+- **Example**:
+    ```html
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ```
+
+### Accessibility (A11y)
+
+Web accessibility means that websites, tools, and technologies are designed and developed so that people with disabilities can use them.
+
+- **Key Practices**:
+    - Using semantic HTML
+    - Providing `alt` text for images
+    - Ensuring proper heading structure
+    - Using ARIA (Accessible Rich Internet Applications) attributes where necessary
+    - Ensuring keyboard navigability
 
 This summary covers the fundamental HTML tags and concepts demonstrated in the project files. For more in-depth information, refer to the resources in the `README.md` file.

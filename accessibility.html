@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML Accessibility Guide and Examples">
+    <title>HTML Accessibility Guide</title>
+    <link rel="icon" type="image/x-icon" href="images/icons8-html-filetype-48.png">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --code-bg: #f5f5f5;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-top: 1.5em;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5em;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 1em;
+            background-color: black;
+            color: white;
+        }
+
+        .skip-link:focus {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        section {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .code-example {
+            background-color: var(--code-bg);
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        [role="alert"] {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="index.html" class="back-button" aria-label="Go back to home page">Back to Home</a>
+    <main id="main-content">
+        <h1>HTML Accessibility Best Practices</h1>
+        <section aria-labelledby="intro-heading" class="theory-section">
+            <h2 id="intro-heading">Introduction to Web Accessibility</h2>
+            <p>Web accessibility is a crucial aspect of modern web development that ensures digital content is accessible to all users, regardless of their abilities or disabilities. Here's a comprehensive overview:</p>
+            
+            <h3>What is Web Accessibility?</h3>
+            <p>Web accessibility refers to the practice of designing and developing websites that can be used by everyone, including:</p>
+            <ul>
+                <li>People with visual impairments (blind, low vision, color-blind)</li>
+                <li>People with hearing impairments</li>
+                <li>People with motor disabilities</li>
+                <li>People with cognitive disabilities</li>
+                <li>Elderly users</li>
+                <li>Users with temporary disabilities</li>
+            </ul>
+            <h3>Key Principles of Web Accessibility (WCAG)</h3>
+            <ol>
+                <li><strong>Perceivable:</strong> Information must be presentable to users in ways they can perceive
+                    <ul>
+                        <li>Provide text alternatives for non-text content</li>
+                        <li>Create content that can be presented in different ways</li>
+                        <li>Make it easier for users to see and hear content</li>
+                    </ul>
+                </li>
+                <li><strong>Operable:</strong> Interface components must be operable
+                    <ul>
+                        <li>Make all functionality available from a keyboard</li>
+                        <li>Give users enough time to read and use content</li>
+                        <li>Help users navigate and find content</li>
+                    </ul>
+                </li>
+                <li><strong>Understandable:</strong> Information and operation must be understandable
+                    <ul>
+                        <li>Make text content readable and understandable</li>
+                        <li>Make content appear and operate in predictable ways</li>
+                        <li>Help users avoid and correct mistakes</li>
+                    </ul>
+                </li>
+                <li><strong>Robust:</strong> Content must be robust enough to be interpreted by various user agents
+                    <ul>
+                        <li>Maximize compatibility with current and future tools</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section aria-labelledby="aria-heading" class="code-section">
+            <h2 id="aria-heading">ARIA Roles and Labels</h2>
+            <div role="alert" aria-live="polite">
+                This is an example of an ARIA live region that announces dynamic content changes.
+            </div>
+            <div class="code-example">
+                &lt;div role="alert" aria-live="polite"&gt;
+                    This is an example of an ARIA live region
+                &lt;/div&gt;
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>Learn more about web accessibility at <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative (WAI)</a></p>
+    </footer>
+</body>
+</html>

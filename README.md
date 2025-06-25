@@ -2,10 +2,17 @@
 
 This repository contains basic **HTML5 examples and exercises** for learning fundamental web development concepts. It is designed for beginners to explore and understand various HTML elements through hands-on examples.
 
-
 ## Files
 
+- **accessibility.html**: Examples of HTML accessibility best practices and techniques.
 - **anchor.html**: Examples of HTML anchor tags and hyperlinks
+- **blockElements.html**: Examples of block elements in HTML.
+- **divspan.html**: Examples of using the div and span elements.
+- **form.html**: Examples of using the form element.
+- **index.html**: Main index file for navigation.
+- **inlineElements.html**: Examples of inline elements in HTML.
+- **meta.html**: Examples of using the meta element.
+- **semantic.html**: Examples of using semantic HTML elements.
 - **comments.html**: Demonstration of HTML comments
 - **heading.html**: Examples of HTML heading elements
 - **htmlEntities.html**: Examples of HTML entities and special characters
@@ -20,9 +27,6 @@ This repository contains basic **HTML5 examples and exercises** for learning fun
 - **table.html**: Examples of using the table element for creating tabular data.
 - **list.html**: Examples of using the list elements.
 - **iframes.html**: Examples of using the iframe element for embedding external content.
-
-
-
 
 ## Getting Started
 
@@ -45,6 +49,13 @@ This repository contains basic **HTML5 examples and exercises** for learning fun
 - Tables
 - Lists
 - Iframes
+- Semantic HTML Elements
+- Accessibility
+- Block and Inline Elements
+- Div and Span Elements
+- Forms and Input Elements
+- Meta Tags
+
 
 ## Sample Code Snippet
 
@@ -99,11 +110,4 @@ For any inquiries or assistance, please contact [srjingole0610@gmail.com](mailto
 - It is not a substitute for professional web development training or resources.
 - The code provided in this repository is for demonstrative purposes and may not cover all best practices or real-world scenarios.
 - The examples and exercises provided here are not guaranteed to be accurate, complete, or up-to-date.
-- Use this project at your own risk and discretion. 
-
-
-
-
-
-
-
+- Use this project at your own risk and discretion.
