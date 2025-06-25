@@ -27,6 +27,9 @@ This repository contains basic **HTML5 examples and exercises** for learning fun
 - **table.html**: Examples of using the table element for creating tabular data.
 - **list.html**: Examples of using the list elements.
 - **iframes.html**: Examples of using the iframe element for embedding external content.
+- **seo.html**: Examples of using the seo element for embedding external content.
+- **html5api.html**: Examples of using the html5 api element for embedding external content.
+- **canvas_svg.html**: Examples of using the canvas element for drawing graphics.
 
 ## Getting Started
 
@@ -55,6 +58,9 @@ This repository contains basic **HTML5 examples and exercises** for learning fun
 - Div and Span Elements
 - Forms and Input Elements
 - Meta Tags
+- SEO
+- HTML5 APIs
+- Canvas and SVG
 
 
 ## Sample Code Snippet

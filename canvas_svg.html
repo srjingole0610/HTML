@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas vs SVG Demo</title>
+    <link rel="icon" type="image/x-icon" href="images/icons8-html-filetype-48.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+            gap: 30px;
+        }
+
+        .section {
+            text-align: center;
+            max-width: 45%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        .theory-section {
+            text-align: left;
+            margin: 20px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        canvas, svg {
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section li {
+            background-color: #f8f9fa;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border-left: 3px solid #3498db;
+        }
+
+        strong {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">Back to Index</a>
+    <h1>HTML Canvas vs SVG Comparison</h1>
+
+    <div class="theory-section">
+        <h2>Deep Dive into Canvas and SVG</h2>
+        
+        <h3>Canvas Theory:</h3>
+        <p>Canvas is a low-level, immediate mode graphics API that operates on a pixel-by-pixel basis. It works by:</p>
+        <ul>
+            <li><strong>Immediate Mode Rendering:</strong> Once pixels are drawn, the canvas "forgets" about them. This means any changes require redrawing the entire canvas.</li>
+            <li><strong>Raster-Based:</strong> Everything is ultimately converted to pixels, making it memory-efficient for complex scenes.</li>
+            <li><strong>State Machine:</strong> Canvas uses a stateful API where properties (like fillStyle) persist until changed.</li>
+            <li><strong>Performance Characteristics:</strong> Performs better with many objects due to lack of DOM overhead, but worse with frequent updates to individual elements.</li>
+            <li><strong>Memory Management:</strong> Uses less memory for complex scenes as it doesn't maintain object references.</li>
+        </ul>
+
+        <h3>SVG Theory:</h3>
+        <p>SVG is a retained mode vector graphics format based on XML. Key concepts include:</p>
+        <ul>
+            <li><strong>Document Object Model:</strong> Each shape is a DOM element, making it easy to modify and animate individual elements.</li>
+            <li><strong>Vector-Based:</strong> Uses mathematical equations to define shapes, ensuring perfect scaling at any resolution.</li>
+            <li><strong>Declarative Syntax:</strong> Describes what to draw rather than how to draw it, making it more maintainable.</li>
+            <li><strong>Event Handling:</strong> Native support for events on individual elements without custom hit detection.</li>
+            <li><strong>CSS Integration:</strong> Full support for CSS styling and animations.</li>
+        </ul>
+
+        <h3>Technical Considerations:</h3>
+        <ul>
+            <li><strong>Memory Usage:</strong> SVG stores objects in memory, while Canvas stores pixels.</li>
+            <li><strong>Performance Thresholds:</strong> Canvas typically performs better above 10,000 objects.</li>
+            <li><strong>Animation Approaches:</strong> Canvas requires manual frame rendering, SVG can use CSS/SMIL.</li>
+            <li><strong>Browser Support:</strong> Both are widely supported in modern browsers.</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <!-- Canvas Section -->
+        <div class="section">
+            <h2>Canvas Example</h2>
+            <p>Canvas is pixel-based and good for complex graphics</p>
+            <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000; background-color: #f0f0f0;">
+                Your browser does not support the canvas element.
+            </canvas>
+            
+            <script>
+                const canvas = document.getElementById('myCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Draw a blue circle
+                ctx.beginPath();
+                ctx.arc(150, 100, 50, 0, 2 * Math.PI);
+                ctx.fillStyle = 'blue';
+                ctx.fill();
+                
+                // Draw a red rectangle
+                ctx.fillStyle = 'red';
+                ctx.fillRect(50, 50, 50, 50);
+                
+                // Draw a green triangle
+                ctx.beginPath();
+                ctx.moveTo(200, 50);
+                ctx.lineTo(250, 100);
+                ctx.lineTo(200, 150);
+                ctx.closePath();
+                ctx.fillStyle = 'green';
+                ctx.fill();
+                
+                // Draw gradient ellipse
+                const gradient = ctx.createLinearGradient(120, 130, 180, 170);
+                gradient.addColorStop(0, 'yellow');
+                gradient.addColorStop(1, 'red');
+                ctx.beginPath();
+                ctx.ellipse(150, 150, 30, 20, 0, 0, 2 * Math.PI);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+            </script>
+
+            <h3>Canvas Features:</h3>
+            <ul>
+                <li>Resolution dependent</li>
+                <li>No DOM for elements</li>
+                <li>Better performance with many objects</li>
+                <li>Pixel manipulation possible</li>
+                <li>Suitable for game graphics</li>
+                <li>Lost in zoom</li>
+                <li>Can save as image file</li>
+            </ul>
+
+            <h3>When to Use Canvas:</h3>
+            <ul>
+                <li>Complex animations</li>
+                <li>Games development</li>
+                <li>Real-time data visualization</li>
+                <li>Photo manipulation</li>
+            </ul>
+        </div>
+
+        <!-- SVG Section -->
+        <div class="section">
+            <h2>SVG Example</h2>
+            <p>SVG is vector-based and good for scalable graphics</p>
+            <svg width="300" height="200" style="border:1px solid #000; background-color: #f0f0f0;">
+                <!-- Basic Shapes -->
+                <circle cx="150" cy="100" r="50" fill="blue" />
+                <rect x="50" y="50" width="50" height="50" fill="red" />
+                <path d="M200,50 L250,100 L200,150 Z" fill="green" />
+                
+                <!-- Advanced SVG Features -->
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <ellipse cx="150" cy="150" rx="30" ry="20" fill="url(#gradient)" />
+            </svg>
+
+            <h3>SVG Features:</h3>
+            <ul>
+                <li>Resolution independent</li>
+                <li>Each element in DOM</li>
+                <li>Better for fewer objects</li>
+                <li>Better accessibility</li>
+                <li>Support for animations</li>
+                <li>Scales without quality loss</li>
+                <li>Can be styled with CSS</li>
+            </ul>
+
+            <h3>When to Use SVG:</h3>
+            <ul>
+                <li>Logos and icons</li>
+                <li>Responsive graphics</li>
+                <li>Interactive diagrams</li>
+                <li>Static illustrations</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
