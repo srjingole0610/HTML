@@ -1,237 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about HTML lists, their usage, and best practices"
+    />
+    <meta
+      name="keywords"
+      content="HTML, lists, ul, ol, li, unordered list, ordered list, nested lists"
+    />
+    <meta name="author" content="Suraj Ingole" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../images/icons8-html-filetype-48.png"
+    />
     <title>HTML Lists Tutorial</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
 
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
 
-        h2 {
-            color: #2980b9;
-            margin-top: 30px;
-        }
+      .back-button:hover {
+        background-color: #2980b9;
+      }
 
-        h3 {
-            color: #16a085;
-        }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 10px;
+        margin-top: 50px;
+      }
 
-        /* Theory Section Styling */
-        .theory {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
+      h2 {
+        color: #2980b9;
+        margin-top: 30px;
+      }
 
-        .theory ul li {
-            color: #34495e;
-        }
+      h3 {
+        color: #16a085;
+      }
 
-        /* Example Sections Styling */
-        .example-section {
-            background-color: #e8f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #3498db;
-        }
+      /* Theory Section Styling */
+      .theory {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
 
-        /* List Styling */
-        ul, ol {
-            padding-left: 25px;
-        }
+      .theory ul li {
+        color: #34495e;
+      }
 
-        li {
-            margin: 8px 0;
-        }
+      .theory-advanced {
+        background-color: #e8f6f3;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border-left: 4px solid #16a085;
+      }
 
-        /* Description List Styling */
-        dl {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+      /* Example Sections Styling */
+      .example-section {
+        background-color: #e8f4f8;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        border-left: 4px solid #3498db;
+      }
 
-        dt {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-top: 15px;
-        }
+      .code-example {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        border-left: 4px solid #e74c3c;
+        font-family: monospace;
+        margin: 10px 0;
+      }
 
-        dd {
-            margin-left: 20px;
-            color: #7f8c8d;
-        }
+      /* List Styling */
+      ul,
+      ol {
+        padding-left: 25px;
+      }
 
-        /* Custom List Styling */
-        .custom-list {
-            background-color: #fff3e0;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
+      li {
+        margin: 8px 0;
+      }
 
-        /* Link Styling */
-        .nav-list a {
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+      /* Description List Styling */
+      dl {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-        .nav-list a:hover {
-            color: #2c3e50;
-            text-decoration: underline;
-        }
+      dt {
+        font-weight: bold;
+        color: #2c3e50;
+        margin-top: 15px;
+      }
+
+      dd {
+        margin-left: 20px;
+        color: #7f8c8d;
+      }
+
+      /* Custom List Styling */
+      .custom-list {
+        background-color: #fff3e0;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+
+      /* Link Styling */
+      .nav-list a {
+        color: #3498db;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .nav-list a:hover {
+        color: #2c3e50;
+        text-decoration: underline;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <a href="../index.html" class="back-button">← Back to Index</a>
     <h1>Understanding HTML Lists</h1>
 
     <!-- Theory Section -->
     <section class="theory">
-        <h2>HTML Lists Theory</h2>
-        <p>HTML provides three types of lists to organize content:</p>
-        
-        <h3>1. Unordered Lists (ul)</h3>
-        <p>Used for items where order doesn't matter. Key features:</p>
-        <ul>
-            <li>Created using &lt;ul&gt; tag</li>
-            <li>Each item uses &lt;li&gt; tag</li>
-            <li>Bullet styles: disc (default), circle, square</li>
-            <li>Can be styled with CSS</li>
-        </ul>
+      <h2>HTML Lists Theory</h2>
+      <p>HTML provides three types of lists to organize content:</p>
 
-        <h3>2. Ordered Lists (ol)</h3>
-        <p>Used when sequence matters. Key features:</p>
-        <ul>
-            <li>Created using &lt;ol&gt; tag</li>
-            <li>Automatically numbers items</li>
-            <li>Can start from any number using 'start' attribute</li>
-            <li>Supports different numbering styles (1,A,a,I,i)</li>
-        </ul>
+      <h3>1. Unordered Lists (ul)</h3>
+      <p>Used for items where order doesn't matter. Key features:</p>
+      <ul>
+        <li>Created using &lt;ul&gt; tag</li>
+        <li>Each item uses &lt;li&gt; tag</li>
+        <li>Bullet styles: disc (default), circle, square</li>
+        <li>Can be styled with CSS</li>
+      </ul>
 
-        <h3>3. Description Lists (dl)</h3>
-        <p>Used for term-definition pairs. Components:</p>
+      <div class="theory-advanced">
+        <h4>Advanced Unordered List Features:</h4>
         <ul>
-            <li>&lt;dl&gt;: The description list container</li>
-            <li>&lt;dt&gt;: Definition term</li>
-            <li>&lt;dd&gt;: Definition description</li>
+          <li>Can be nested to create hierarchical structures</li>
+          <li>Custom bullets can be created using CSS list-style-image</li>
+          <li>Bullets can be removed using list-style: none</li>
+          <li>Supports custom attributes for accessibility</li>
         </ul>
+      </div>
 
-        <h3>4. Lists with Anchor Tags</h3>
-        <p>Lists are commonly used with anchor tags to create navigation menus. Key points:</p>
+      <h3>2. Ordered Lists (ol)</h3>
+      <p>Used when sequence matters. Key features:</p>
+      <ul>
+        <li>Created using &lt;ol&gt; tag</li>
+        <li>Automatically numbers items</li>
+        <li>Can start from any number using 'start' attribute</li>
+        <li>Supports different numbering styles (1,A,a,I,i)</li>
+      </ul>
+
+      <div class="theory-advanced">
+        <h4>Advanced Ordered List Features:</h4>
         <ul>
-            <li>Anchor tags can be placed inside list items</li>
-            <li>Perfect for creating navigation menus</li>
-            <li>Can be styled for better visual appearance</li>
-            <li>Supports both internal and external links</li>
+          <li>The 'reversed' attribute can create descending numbers</li>
+          <li>The 'value' attribute can set specific numbers for items</li>
+          <li>CSS counter properties can create custom numbering</li>
+          <li>Supports nested ordered lists with different numbering styles</li>
         </ul>
+      </div>
+
+      <h3>3. Description Lists (dl)</h3>
+      <p>Used for term-definition pairs. Components:</p>
+      <ul>
+        <li>&lt;dl&gt;: The description list container</li>
+        <li>&lt;dt&gt;: Definition term</li>
+        <li>&lt;dd&gt;: Definition description</li>
+      </ul>
+
+      <div class="theory-advanced">
+        <h4>Advanced Description List Features:</h4>
+        <ul>
+          <li>Multiple &lt;dt&gt; elements can share one &lt;dd&gt;</li>
+          <li>One &lt;dt&gt; can have multiple &lt;dd&gt; elements</li>
+          <li>Can be styled to create complex layouts</li>
+          <li>Useful for FAQ sections and glossaries</li>
+        </ul>
+      </div>
+
+      <h3>4. Lists with Anchor Tags</h3>
+      <p>
+        Lists are commonly used with anchor tags to create navigation menus. Key
+        points:
+      </p>
+      <ul>
+        <li>Anchor tags can be placed inside list items</li>
+        <li>Perfect for creating navigation menus</li>
+        <li>Can be styled for better visual appearance</li>
+        <li>Supports both internal and external links</li>
+      </ul>
+
+      <div class="theory-advanced">
+        <h4>Best Practices for Navigation Lists:</h4>
+        <ul>
+          <li>Use semantic HTML5 nav element as container</li>
+          <li>Include ARIA roles for accessibility</li>
+          <li>Implement mobile-responsive designs</li>
+          <li>Consider dropdown menus for complex navigation</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Examples Section -->
     <div class="example-section">
-        <h2>Unordered List (ul)</h2>
-        <ul>
-            <li>First bullet point</li>
-            <li>Second bullet point</li>
-            <li type="circle">Circle bullet style</li>
-            <li type="square">Square bullet style</li>
-            <li type="disc">Disc bullet style (default)</li>
-        </ul>
+      <h2>Code Examples</h2>
+      <div class="code-example">
+        <p>Basic Unordered List:</p>
+        <pre>
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+            </pre
+        >
+      </div>
 
-        <h2>Ordered List (ol)</h2>
-        <ol>
-            <li>Default numbered item</li>
-            <li>Second numbered item</li>
-        </ol>
+      <div class="code-example">
+        <p>Ordered List with Custom Start:</p>
+        <pre>
+&lt;ol start="5" type="A"&gt;
+    &lt;li&gt;Item E&lt;/li&gt;
+    &lt;li&gt;Item F&lt;/li&gt;
+&lt;/ol&gt;
+            </pre
+        >
+      </div>
+    </div>
 
-        <h3>Ordered List Types</h3>
-        <ol type="A">
-            <li>Uppercase letters (A, B, C)</li>
-            <li>Second item</li>
-        </ol>
+    <div class="example-section">
+      <h2>Unordered List (ul)</h2>
+      <ul>
+        <li>First bullet point</li>
+        <li>Second bullet point</li>
+        <li type="circle">Circle bullet style</li>
+        <li type="square">Square bullet style</li>
+        <li type="disc">Disc bullet style (default)</li>
+      </ul>
 
-        <ol type="a">
-            <li>Lowercase letters (a, b, c)</li>
-            <li>Second item</li>
-        </ol>
+      <h2>Ordered List (ol)</h2>
+      <ol>
+        <li>Default numbered item</li>
+        <li>Second numbered item</li>
+      </ol>
 
-        <ol type="I">
-            <li>Uppercase Roman numerals (I, II, III)</li>
-            <li>Second item</li>
-        </ol>
+      <h3>Ordered List Types</h3>
+      <ol type="A">
+        <li>Uppercase letters (A, B, C)</li>
+        <li>Second item</li>
+      </ol>
 
-        <ol type="i">
-            <li>Lowercase Roman numerals (i, ii, iii)</li>
-            <li>Second item</li>
-        </ol>
+      <ol type="a">
+        <li>Lowercase letters (a, b, c)</li>
+        <li>Second item</li>
+      </ol>
 
-        <ol start="5">
-            <li>This list starts at 5</li>
-            <li>This will be number 6</li>
-        </ol>
+      <ol type="I">
+        <li>Uppercase Roman numerals (I, II, III)</li>
+        <li>Second item</li>
+      </ol>
 
-        <h2>Nested Lists</h2>
-        <ul>
-            <li>Main item 1
-                <ul>
-                    <li>Sub item 1.1</li>
-                    <li>Sub item 1.2</li>
-                </ul>
-            </li>
-            <li>Main item 2</li>
-        </ul>
+      <ol type="i">
+        <li>Lowercase Roman numerals (i, ii, iii)</li>
+        <li>Second item</li>
+      </ol>
 
-        <h2>Navigation List with Anchor Tags</h2>
-        <ul class="nav-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Services</a>
-                <ul>
-                    <li><a href="#web-dev">Web Development</a></li>
-                    <li><a href="#design">Design</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <ol start="5">
+        <li>This list starts at 5</li>
+        <li>This will be number 6</li>
+      </ol>
+
+      <h2>Nested Lists</h2>
+      <ul>
+        <li>
+          Main item 1
+          <ul>
+            <li>Sub item 1.1</li>
+            <li>Sub item 1.2</li>
+          </ul>
+        </li>
+        <li>Main item 2</li>
+      </ul>
+
+      <h2>Navigation List with Anchor Tags</h2>
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li>
+          <a href="#services">Our Services</a>
+          <ul>
+            <li><a href="#web-dev">Web Development</a></li>
+            <li><a href="#design">Design</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
 
     <h2>Description List (dl)</h2>
     <dl>
-        <dt>HTML</dt>
-        <dd>HyperText Markup Language - the standard markup language for web pages</dd>
-        
-        <dt>CSS</dt>
-        <dd>Cascading Style Sheets - used for styling web pages</dd>
-        
-        <dt>JavaScript</dt>
-        <dd>A programming language used for web development</dd>
+      <dt>HTML</dt>
+      <dd>
+        HyperText Markup Language - the standard markup language for web pages
+      </dd>
+
+      <dt>CSS</dt>
+      <dd>Cascading Style Sheets - used for styling web pages</dd>
+
+      <dt>JavaScript</dt>
+      <dd>A programming language used for web development</dd>
     </dl>
 
     <div class="custom-list">
-        <h2>Custom Styled List</h2>
-        <ul style="list-style-type: '🌟';">
-            <li>Custom bullet point with star emoji</li>
-            <li>Another star item</li>
-        </ul>
+      <h2>Custom Styled List</h2>
+      <ul style="list-style-type: '🌟'">
+        <li>Custom bullet point with star emoji</li>
+        <li>Another star item</li>
+      </ul>
     </div>
-
-</body>
+  </body>
 </html>

@@ -5,28 +5,142 @@
     <meta charset="UTF-8">
     <!-- viewport meta tag helps with responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML void elements, their usage, and best practices">
+    <meta name="keywords" content="HTML, void elements, empty elements, best practices">
+    <meta name="author" content="Suraj Ingole">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
     <title>Void Elements in HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .theory {
+            background-color: #e6f3ff;
+            padding: 15px;
+            border-left: 4px solid #0066cc;
+            margin: 10px 0;
+        }
+
+        .code-example {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-left: 4px solid #666;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #0066cc;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
 </head>
 <body>
+    <a href="../index.html" class="back-button">← Back to Index</a>
+
     <h1>HTML Void Elements (Empty Elements)</h1>
 
+    <!-- Theory -->
+    <section>
+        <div class="theory">
+            <h2>Understanding Void Elements</h2>
+            <p>Void elements are a special category of HTML elements that:</p>
+            <ul>
+                <li>Cannot have any content or child elements</li>
+                <li>Are self-closing by nature</li>
+                <li>Play crucial roles in document structure and functionality</li>
+                <li>Are parsed differently by browsers compared to normal elements</li>
+            </ul>
+            <p>In HTML5, void elements can be written in two ways:</p>
+            <div class="code-example">
+                &lt;img src="image.jpg" alt="description"&gt;<br>
+                &lt;img src="image.jpg" alt="description"/&gt;
+            </div>
+            <p>Both syntaxes are valid, though the first one is more common in HTML5.</p>
+        </div>
+    </section>
+
+    <!-- Element Sections -->
     <section>
         <h2>1. Line Break Element &lt;br&gt;</h2>
-        <p>This is a line<br>break example</p>
+        <div class="theory">
+            <p>The line break element is used to create a line break in text. It's particularly useful in:</p>
+            <ul>
+                <li>Poetry formatting</li>
+                <li>Addresses</li>
+                <li>Song lyrics</li>
+            </ul>
+        </div>
+        <div class="code-example">
+            <p>This is a line<br>break example</p>
+        </div>
         <p><strong>Usage:</strong> Forces a line break. No attributes required.</p>
     </section>
 
     <section>
         <h2>2. Horizontal Rule &lt;hr&gt;</h2>
-        <p>Text above the line</p>
-        <hr>
-        <p>Text below the line</p>
+        <div class="theory">
+            <p>The horizontal rule represents a thematic break between paragraphs. It's commonly used to:</p>
+            <ul>
+                <li>Separate content sections</li>
+                <li>Create visual breaks in long text</li>
+                <li>Indicate scene changes in a story</li>
+            </ul>
+        </div>
+        <div class="code-example">
+            <p>Text above the line</p>
+            <hr>
+            <p>Text below the line</p>
+        </div>
         <p><strong>Attributes:</strong> size, width, color, align</p>
     </section>
 
     <section>
         <h2>3. Image Element &lt;img&gt;</h2>
-        <img src="images/hong-zhao-eGnfcEfkP04-unsplash.jpg" alt="Example image" width="300" height="200">
+        <img src="../images/hong-zhao-eGnfcEfkP04-unsplash.jpg" alt="Example image" width="300" height="200">
         <p><strong>Required Attributes:</strong> src, alt</p>
         <p><strong>Optional Attributes:</strong> width, height, loading, srcset, sizes</p>
     </section>
@@ -58,12 +172,15 @@
 
     <section>
         <h2>7. Area Element &lt;area&gt;</h2>
-        <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+        <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
         <map name="workmap">
-            <area shape="rect" coords="34,44,270,350" alt="Computer">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="#computer">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="#phone">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="#coffee">
         </map>
         <p><strong>Required Attributes:</strong> shape, coords, alt</p>
         <p><strong>Shapes:</strong> rect, circle, poly</p>
+        <p><em>Note: This image demonstrates clickable areas - computer screen, phone, and coffee cup</em></p>
     </section>
 
     <section>
@@ -75,7 +192,7 @@
 
     <section>
         <h2>9. Embed Element &lt;embed&gt;</h2>
-        <embed src="file.pdf" width="500" height="200">
+        <embed src="../document/Suraj_Ingole_CV.pdf" type="application/pdf" width="100%" height="500">
         <p><strong>Required Attributes:</strong> src</p>
         <p><strong>Optional Attributes:</strong> type, width, height</p>
     </section>
@@ -83,17 +200,19 @@
     <section>
         <h2>10. Source Element &lt;source&gt;</h2>
         <video width="320" height="240" controls>
-            <source src="movie.mp4" type="video/mp4">
+            <source src="../video/sample-5s.mp4" type="video/mp4">
+            <source src="../video/sample-5s.webm" type="video/webm">
+            <source src="../video/sample-5s.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video>
         <p><strong>Required Attributes:</strong> src</p>
         <p><strong>Optional Attributes:</strong> type, media, sizes, srcset</p>
+        <p><em>Note: Multiple source elements allow fallback options for different browser support</em></p>
     </section>
-
     <section>
         <h2>11. Track Element &lt;track&gt;</h2>
         <video width="320" height="240" controls>
-            <source src="video.mp4" type="video/mp4">
+            <source src="../video/sample-5s.mp4" type="video/mp4">
             <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
         </video>
         <p><strong>Required Attributes:</strong> src, kind, srclang</p>
@@ -131,8 +250,21 @@
         <p><strong>Usage:</strong> Defines parameters for plugins used in object element</p>
     </section>
 
+    <!-- Summary Section -->
     <section>
         <h2>Key Points About Void Elements:</h2>
+        <div class="theory">
+            <h3>Historical Context</h3>
+            <p>Void elements have been part of HTML since its inception. They were designed to handle specific use cases where content is not needed or where the element itself represents both its opening and closing tags.</p>
+
+            <h3>Browser Processing</h3>
+            <p>Browsers handle void elements differently from regular elements:</p>
+            <ul>
+                <li>They are immediately closed upon parsing</li>
+                <li>Any attempt to include content is ignored</li>
+                <li>They don't participate in the normal parent-child relationship model</li>
+            </ul>
+        </div>
         <ul>
             <li>Void elements have no content and no closing tag</li>
             <li>They are also called empty elements or self-closing tags</li>

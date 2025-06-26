@@ -6,203 +6,186 @@
     <!-- Contains metadata about the document -->
     <meta charset="UTF-8"> <!-- Character encoding declaration -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <meta name="description" content="Learn about text formatting in HTML, including strong, emphasis, bold, italic, and more.">
+    <meta name="keywords" content="HTML, text formatting, strong, emphasis, bold, italic, subscript, superscript, blockquote, abbreviation">
+    <meta name="author" content="Suraj Ingole">
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">   
     <title>Text Formatting</title> <!-- Page title shown in browser tab -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .theory-section {
+            background-color: #e8f4f8;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #2196F3;
+            border-radius: 4px;
+        }
+
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #1976D2;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Main content of the document -->
-    <h1>Text Formatting</h1> <!-- Main heading -->
+    <div class="container">
+        <a href="../index.html" class="back-button">← Back to Index</a>
+        
+        <h1>Text Formatting in HTML</h1>
 
-    <!-- strong and emphasis - Semantic tags for importance and stress -->
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Distinctio</strong> accusantium accusamus veniam
-        expedita, numquam <em>temporibus</em>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo
-        veritatis
-    </p>
+        <div class="theory-section">
+            <h2>Introduction to HTML Text Formatting</h2>
+            <p>HTML provides various tags for formatting text to improve readability, accessibility, and semantic meaning. Text formatting can be categorized into several types:</p>
+            <ul>
+                <li>Semantic formatting (meaning-based)</li>
+                <li>Visual formatting (appearance-based)</li>
+                <li>Technical formatting (specialized use cases)</li>
+            </ul>
+        </div>
 
-    <hr> <!-- Horizontal rule for visual separation -->
+        <div class="theory-section">
+            <h3>Semantic vs Visual Formatting</h3>
+            <p>Semantic tags like &lt;strong&gt; and &lt;em&gt; convey meaning, while visual tags like &lt;b&gt; and &lt;i&gt; only change appearance. Semantic tags are preferred for better accessibility and SEO.</p>
+        </div>
 
-    <!-- bold and italic - Visual formatting tags -->
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <b>Distinctio</b> accusantium accusamus veniam expedita,
-        numquam <i>temporibus</i>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo veritatis
-    </p>
+        <!-- strong and emphasis - Semantic tags for importance and stress -->
+        <div class="code-example">
+            <h3>Strong and Emphasis Tags</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Distinctio</strong> accusantium accusamus veniam
+                expedita, numquam <em>temporibus</em>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo
+                veritatis
+            </p>
+        </div>
 
-    <hr>
+        <div class="theory-section">
+            <h3>Visual Formatting Tags</h3>
+            <p>While semantic tags are preferred, visual formatting tags can be useful for purely presentational purposes where semantics aren't important.</p>
+        </div>
 
-    <!-- underlined and strikethrough - Text decoration tags -->
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <u>Distinctio</u> accusantium accusamus veniam expedita,
-        numquam <s>temporibus</s>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo veritatis
-    </p>
+        <!-- bold and italic - Visual formatting tags -->
+        <div class="code-example">
+            <h3>Bold and Italic Tags</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <b>Distinctio</b> accusantium accusamus veniam expedita,
+                numquam <i>temporibus</i>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo veritatis
+            </p>
+        </div>
 
-    <hr>
+        <div class="theory-section">
+            <h3>Text Decoration</h3>
+            <p>HTML provides tags for adding decorative elements to text, such as underlining and strikethrough.</p>
+        </div>
 
-    <!-- superscript and subscript - Text positioning tags -->
-    <p>
-        2<sup>10</sup> = 1024 <!-- Superscript for exponents -->
-    </p>
-    <p>
-        H<sub>2</sub>O <!-- Subscript for chemical formulas -->
-    </p>
+        <!-- underlined and strikethrough - Text decoration tags -->
+        <div class="code-example">
+            <h3>Underline and Strikethrough Tags</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <u>Distinctio</u> accusantium accusamus veniam expedita,
+                numquam <s>temporibus</s>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo veritatis
+            </p>
+        </div>
 
-    <hr>
+        <!-- subscript and superscript tags -->
+        <div class="code-example">
+            <h3>Subscript and Superscript Tags</h3>
+            <p>
+                Chemical formula for water: H<sub>2</sub>O
+                <br>
+                Mathematical expression: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup>
+            </p>
+        </div>
 
-    <!-- preformatted text - Preserves whitespace and line breaks -->
-    <pre>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Distinctio</strong> accusantium accusamus veniam
-        expedita, numquam <em>temporibus</em>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo
-        veritatis
-    </pre>
+        <!-- mark tag for highlighting -->
+        <div class="code-example">
+            <h3>Highlight Tag</h3>
+            <p>
+                Use the mark tag to <mark>highlight important text</mark> in a document.
+            </p>
+        </div>
 
-    <hr>
+        <!-- small tag for side comments -->
+        <div class="code-example">
+            <h3>Small Text Tag</h3>
+            <p>
+                Regular text with <small>smaller text for fine print or side comments</small>.
+            </p>
+        </div>
 
-    <!-- abbreviation - Shows full form on hover -->
-    <abbr title="World Health Organization">WHO</abbr>
+        <!-- abbreviation tag -->
+        <div class="code-example">
+            <h3>Abbreviation Tag</h3>
+            <p>
+                The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+            </p>
+        </div>
 
-    <hr>
+        <!-- blockquote and cite tags -->
+        <div class="code-example">
+            <h3>Blockquote and Cite Tags</h3>
+            <blockquote cite="https://example.com">
+                <p>This is a long quotation that needs to be set apart from the main text.</p>
+            </blockquote>
+            <p>From the book <cite>The Art of Web Design</cite> by John Smith.</p>
+        </div>
 
-    <!-- blockquote - For quoted content blocks -->
-    <blockquote>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Distinctio</strong> accusantium accusamus veniam
-        expedita, numquam <em>temporibus</em>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo
-        veritatis
-    </blockquote>
-    
-    <hr>
+        <!-- pre and code tags -->
+        <div class="code-example">
+            <h3>Preformatted Text and Code Tags</h3>
+            <pre>
+This text preserves
+    both spaces
+        and line breaks.
+            </pre>
+            <p>Here's some inline <code>computer code</code>.</p>
+        </div>
 
-    <!-- keyboard input - Represents keyboard commands -->
-    <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Del</kbd>
+        <div class="theory-section">
+            <h3>Advanced Text Formatting</h3>
+            <p>HTML also provides specialized tags for technical and scientific content, East Asian typography, and other specific use cases.</p>
+        </div>
 
-    <hr>
-
-    <!-- address - Contact information -->
-    <address>
-        1234 Main St <br>
-        Anytown, USA 12345
-    </address>
-
-    <hr>
-
-    <!-- code - For computer code snippets -->
-    <p> 
-        <code>var x = 5;</code>
-    </p>
-
-    <hr>
-
-    <!-- sample - For program output -->
-    <p>
-        <samp>This text is meant to be treated as sample output from a computer program.</samp>
-    </p>
-
-    <hr>
-
-    <!-- variable - For mathematical or programming variables -->
-    <p>
-        The varaiable x is set to <var>5</var>
-    </p>
-
-    <hr>
-
-    <!-- mark tag - Highlights text -->
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <mark>Distinctio</mark> accusantium accusamus veniam
-        expedita, numquam <mark>temporibus</mark>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo
-        veritatis
-    </p>
-
-    <hr>
-
-    <!-- small tag - For side comments and fine print -->
-    <small>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Distinctio</strong> accusantium accusamus veniam
-        expedita, numquam <em>temporibus</em>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo
-        veritatis
-    </small>
-
-    <hr>
-
-    <!-- cite tag - For work titles -->
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <cite>Distinctio</cite> accusantium accusamus veniam
-        expedita, numquam <cite>temporibus</cite>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo
-        veritatis
-    </p>
-
-    <hr>
-
-    <!-- inline style tag - For direct CSS styling -->
-    <p style="color: red;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Distinctio</strong> accusantium accusamus veniam
-        expedita, numquam <em>temporibus</em>. Aliquid nisi iste ex consequuntur aspernatur laborum impedit mollitia. Porro illo
-        veritatis
-    </p>
-
-    <hr>    
-
-    <!-- definition tag - For defining terms -->
-    <p>
-        A <dfn>browser</dfn> is a software application for accessing information on the World Wide Web.
-    </p>
-
-    <hr>
-
-    <!-- inserted text - Shows added content -->
-    <p>
-        This text has been <ins>inserted</ins> into the document.
-    </p>
-
-    <hr>
-
-    <!-- deleted text - Shows removed content -->
-    <p>
-        This text has been <del>deleted</del> from the document.
-    </p>
-
-    <hr>
-
-    <!-- ruby annotations - For East Asian typography -->
-    <ruby>
-        漢 <rt>かん</rt>
-        字 <rt>じ</rt>
-    </ruby>
-
-    <hr>
-
-    <!-- bidirectional override - Controls text direction -->
-    <p>
-        This text will go left to right <bdo dir="rtl">but this will go right to left</bdo>
-    </p>
-
-    <hr>
-
-    <!-- time - For dates and times -->
-    <p>
-        The concert starts at <time>20:00</time> on <time datetime="2024-04-01">April 1</time>
-    </p>
-
-    <hr>
-
-    <!-- meter - For gauge and measurements -->
-    <p>
-        Disk usage: <meter value="0.6">60%</meter>
-    </p>
-
-    <hr>
-
-    <!-- progress - For task completion -->
-    <p>
-        Download progress: <progress value="70" max="100">70%</progress>
-    </p>
-
-    <hr>
-
-    <!-- word break opportunity - Suggests where words can break -->
-    <p style="width: 100px; border: 1px solid black;">
-        This is a very<wbr>long<wbr>word<wbr>that<wbr>needs<wbr>breaking
-    </p>
-
+    </div>
 </body>
 
 </html>

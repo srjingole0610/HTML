@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML iframes, their usage, and best practices">
+    <meta name="keywords" content="HTML, iframe, container, content, best practices">
+    <meta name="author" content="Suraj Ingole">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
+
     <title>Understanding HTML iframes</title>
     <!-- Security headers for iframe protection -->
     <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://trusted-site.com">
@@ -28,6 +34,24 @@
         h2 {
             color: #34495e;
             margin-top: 30px;
+        }
+
+        /* Back button styling */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
         }
 
         /* Theory section styling */
@@ -97,11 +121,20 @@
             iframe {
                 max-width: 100%;
             }
+
+            .back-button {
+                position: static;
+                display: block;
+                margin: 10px auto;
+                text-align: center;
+                width: fit-content;
+            }
         }
     </style>
 </head>
 
 <body>
+    <a href="../index.html" class="back-button">← Back to Index</a>
     <h1>HTML iframe Theory and Examples</h1>
 
     <!-- Theory Section -->

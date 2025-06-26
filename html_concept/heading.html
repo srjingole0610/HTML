@@ -3,41 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML headings, their usage, and best practices">
+    <meta name="keywords" content="HTML, headings, h1, h2, h3, h4, h5, h6">
+    <meta name="author" content="Suraj Ingole">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
     <title>HTML Headings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #16a085;
+        }
+
+        .theory-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+
+        .code-example {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .heading-demo {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .heading-demo h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .heading-demo h2 { font-size: 2em; margin-bottom: 12px; }
+        .heading-demo h3 { font-size: 1.75em; margin-bottom: 10px; }
+        .heading-demo h4 { font-size: 1.5em; margin-bottom: 8px; }
+        .heading-demo h5 { font-size: 1.25em; margin-bottom: 6px; }
+        .heading-demo h6 { font-size: 1em; margin-bottom: 4px; }
+    </style>
 </head>
 <body>
+    <a href="../index.html" class="back-button">← Back to Index</a>
+
     <!-- HTML has 6 levels of headings, from h1 to h6 -->
     <!-- h1 is the most important heading and should be used for main titles -->
-    <h1>Main Title (h1) - Most Important Heading</h1>
-    
-    <!-- h2 is used for section headings -->
-    <h2>Section Heading (h2) - Second Level</h2>
-    
-    <!-- h3 is used for subsection headings -->
-    <h3>Subsection Heading (h3) - Third Level</h3>
-    
-    <!-- h4, h5, and h6 are used for increasingly smaller subdivisions -->
-    <h4>Smaller Heading (h4) - Fourth Level</h4>
-    <h5>Even Smaller Heading (h5) - Fifth Level</h5>
-    <h6>Smallest Heading (h6) - Sixth Level</h6>
+    <h1>Understanding HTML Headings</h1>
 
-    <!-- Example of heading hierarchy in practice -->
-    <div style="margin-top: 20px;">
-        <h1>Website Title</h1>
-        <h2>Blog Section</h2>
-        <h3>Article Title</h3>
-        <h4>Article Subsection</h4>
-        <h5>Detailed Point</h5>
-        <h6>Minor Note</h6>
+    <div class="theory-section">
+        <h2>What are HTML Headings?</h2>
+        <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags. They are essential elements that help structure web content and provide a clear hierarchy of information. Each heading level has a different semantic meaning and visual importance.</p>
     </div>
 
-    <!-- Important notes about headings -->
-    <p>Key points about HTML headings:</p>
-    <ul>
-        <li>Use headings in order (h1 to h6)</li>
-        <li>Don't skip heading levels</li>
-        <li>Use only one h1 per page for SEO</li>
-        <li>Headings help structure content and improve accessibility</li>
-    </ul>
+    <div class="theory-section">
+        <h2>Heading Hierarchy and Examples</h2>
+        <!-- h1 is the most important heading and should be used for main titles -->
+        <h3>H1 - Primary Heading</h3>
+        <p>The &lt;h1&gt; tag represents the main heading of the page. It should clearly describe the page's main topic and is crucial for SEO.</p>
+        
+        <!-- h2 is used for section headings -->
+        <h3>H2 - Section Heading</h3>
+        <p>The &lt;h2&gt; tag is used for major sections within your content. It helps break down the main topic into logical segments.</p>
+        
+        <!-- h3 is used for subsection headings -->
+        <h3>H3 - Subsection Heading</h3>
+        <p>Use &lt;h3&gt; for subsections within your H2 sections. They help create a more detailed content structure.</p>
+        
+        <!-- h4, h5, and h6 are used for increasingly smaller subdivisions -->
+        <h3>H4, H5, and H6 - Further Subdivisions</h3>
+        <p>These headings are used for increasingly specific and detailed sections of content:</p>
+        <ul>
+            <li>H4: Used for subsections of H3 content</li>
+            <li>H5: For very specific points within H4 sections</li>
+            <li>H6: The most specific level, used rarely</li>
+        </ul>
+    </div>
+
+    <div class="theory-section">
+        <h2>Best Practices for HTML Headings</h2>
+        <ul>
+            <li><strong>Proper Hierarchy:</strong> Always maintain a logical heading structure (don't skip levels)</li>
+            <li><strong>Single H1:</strong> Use only one H1 heading per page for optimal SEO</li>
+            <li><strong>Semantic Meaning:</strong> Choose heading levels based on content hierarchy, not appearance</li>
+            <li><strong>Accessibility:</strong> Proper heading structure helps screen readers navigate content</li>
+            <li><strong>SEO Impact:</strong> Search engines use headings to understand page structure and content relevance</li>
+            <li><strong>Content Length:</strong> Keep headings concise and descriptive</li>
+            <li><strong>Visual Hierarchy:</strong> Ensure heading styles reflect their importance in the content structure</li>
+        </ul>
+    </div>
+
+    <div class="code-example">
+        <h2>Practical Example of Heading Structure</h2>
+        <div class="heading-demo">
+            <h1>Website Name</h1>
+            <h2>Main Category</h2>
+            <h3>Subcategory</h3>
+            <h4>Detailed Topic</h4>
+            <h5>Specific Point</h5>
+            <h6>Minor Detail</h6>
+        </div>
+    </div>
+
+    <div class="theory-section">
+        <h2>Common Heading Mistakes to Avoid</h2>
+        <ul>
+            <li>Using headings for styling purposes only</li>
+            <li>Skipping heading levels (e.g., h1 to h4)</li>
+            <li>Using multiple h1 tags on a single page</li>
+            <li>Making headings too long or unclear</li>
+            <li>Ignoring semantic hierarchy</li>
+        </ul>
+    </div>
 </body>
 </html>

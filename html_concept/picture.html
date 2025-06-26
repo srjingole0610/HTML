@@ -1,54 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- charset: Specifies the character encoding for the document (UTF-8 for universal character support) -->
     <meta charset="UTF-8">
-    <!-- viewport: Controls the page's dimensions and scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the HTML picture element, its attributes, and how to use them for responsive images.">
+    <meta name="keywords" content="HTML, picture, img, srcset, media, type, sizes, alt, responsive images, art direction">
+    <meta name="author" content="Suraj Ingole">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
     <title>HTML Picture Element Demo</title>
-    <!-- CSS container styles for centering and limiting content width -->
     <style>
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
         }
+        
         h1, h2 {
-            color: #333;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
         }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
         picture {
             display: block;
             margin: 2em 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
+
         img {
             max-width: 100%;
             height: auto;
             display: block;
             transition: transform 0.3s ease;
         }
+
         img:hover {
             transform: scale(1.02);
         }
-        /* Added description text styling */
+
         .image-description {
             margin-top: 1em;
             font-size: 0.9em;
             color: #666;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
         }
-        /* Theory section styling */
+
         .theory {
             background: #f5f5f5;
-            padding: 15px;
+            padding: 20px;
             margin: 20px 0;
-            border-left: 4px solid #333;
+            border-left: 4px solid #3498db;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .code-example {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+
+        .advanced-theory {
+            background: #e8f4f8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <a href="../index.html" class="back-button">← Back to Index</a>
         <h1>Understanding the HTML Picture Element</h1>
+
+        <div class="advanced-theory">
+            <h2>Deep Dive into Picture Element</h2>
+            <p>The HTML Picture element represents a revolutionary approach to responsive images, addressing three key challenges:</p>
+            <ol>
+                <li><strong>Art Direction:</strong> Adapting image content for different screen sizes and devices</li>
+                <li><strong>Device Pixel Ratio:</strong> Handling high-DPI displays effectively</li>
+                <li><strong>Format Support:</strong> Providing modern image formats with fallbacks</li>
+            </ol>
+            
+            <h3>Browser Support and Performance</h3>
+            <p>Modern browsers implement a sophisticated selection algorithm that:</p>
+            <ul>
+                <li>Evaluates media queries in source elements from top to bottom</li>
+                <li>Checks format support before downloading</li>
+                <li>Considers device capabilities for optimal image selection</li>
+            </ul>
+
+            <h3>Best Practices</h3>
+            <ul>
+                <li>Always include width and height attributes to prevent layout shifts</li>
+                <li>Use WebP as primary format with JPEG fallback</li>
+                <li>Implement lazy loading for better performance</li>
+                <li>Provide meaningful alt text for accessibility</li>
+            </ul>
+        </div>
 
         <div class="theory">
             <h3>Key HTML Elements and Attributes:</h3>
@@ -67,72 +140,69 @@
             </ul>
         </div>
 
-        <!-- Basic picture element example -->
-        <h2>1. Basic Responsive Image</h2>
-        <picture>
-            <!-- source: Defines alternative image sources with media queries -->
-            <!-- srcset: Specifies the URL of the image to use -->
-            <!-- media: Defines the condition when this source should be used -->
-            <source srcset="https://images.unsplash.com/photo-1682687220742-aba19b51f36e" media="(min-width: 1024px)">
-            <source srcset="https://images.unsplash.com/photo-1682687220742-aba19b51f36e?w=800" media="(min-width: 768px)">
-            <source srcset="https://images.unsplash.com/photo-1682687220742-aba19b51f36e?w=600" media="(min-width: 480px)">
-            <img src="https://images.unsplash.com/photo-1682687220742-aba19b51f36e?w=400" 
-                 alt="A beautiful mountain landscape" 
-                 loading="lazy">
-        </picture>
-        <p class="image-description">This example demonstrates responsive images using media queries for different screen sizes.</p>
+        <div class="code-example">
+            <h2>1. Basic Responsive Image</h2>
+            <picture>
+                <source srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200" media="(min-width: 1024px)">
+                <source srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" media="(min-width: 768px)">
+                <source srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" media="(min-width: 480px)">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" 
+                     alt="A beautiful mountain landscape" 
+                     loading="lazy">
+            </picture>
+            <p class="image-description">This example demonstrates responsive images using media queries for different screen sizes.</p>
+        </div>
 
-        <!-- Picture element with different image formats -->
-        <h2>2. Format-based Selection</h2>
-        <picture>
-            <!-- type: Specifies the MIME type of the image format -->
-            <source srcset="https://images.unsplash.com/photo-1682686581030-7fa4ea2b96c3?format=webp&q=80" type="image/webp">
-            <source srcset="https://images.unsplash.com/photo-1682686581030-7fa4ea2b96c3?format=avif" type="image/avif">
-            <source srcset="https://images.unsplash.com/photo-1682686581030-7fa4ea2b96c3" type="image/jpeg">
-            <img src="https://images.unsplash.com/photo-1682686581030-7fa4ea2b96c3" 
-                 alt="A serene ocean view"
-                 loading="lazy">
-        </picture>
-        <p class="image-description">Demonstrates format-based selection with modern image formats (WebP, AVIF) and JPEG fallback.</p>
+        <div class="code-example">
+            <h2>2. Format-based Selection</h2>
+            <picture>
+                <source srcset="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&fm=webp" type="image/webp">
+                <source srcset="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&fm=avif" type="image/avif">
+                <source srcset="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800" type="image/jpeg">
+                <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800" 
+                     alt="A serene ocean view"
+                     loading="lazy">
+            </picture>
+            <p class="image-description">Demonstrates format-based selection with modern image formats (WebP, AVIF) and JPEG fallback.</p>
+        </div>
 
-        <!-- Picture element with multiple source sizes -->
-        <h2>3. Multiple Resolution Support</h2>
-        <picture>
-            <!-- srcset with width descriptors (w) for different resolutions -->
-            <!-- sizes: Defines the image's intended size in relation to the viewport -->
-            <source 
-                srcset="https://images.unsplash.com/photo-1682687982183-c2937a74df3d?w=1200&q=80 1200w,
-                        https://images.unsplash.com/photo-1682687982183-c2937a74df3d?w=800&q=80 800w,
-                        https://images.unsplash.com/photo-1682687982183-c2937a74df3d?w=400&q=80 400w"
-                sizes="(max-width: 1200px) 100vw, 1200px"
-                type="image/jpeg">
-            <img src="https://images.unsplash.com/photo-1682687982183-c2937a74df3d?w=800" 
-                 alt="A forest landscape"
-                 loading="lazy">
-        </picture>
-        <p class="image-description">Shows resolution switching with multiple image sizes and responsive loading.</p>
+        <div class="code-example">
+            <h2>3. Multiple Resolution Support</h2>
+            <picture>
+                <source 
+                    srcset="https://images.unsplash.com/photo-1511497584788-876760111969?w=1200 1200w,
+                            https://images.unsplash.com/photo-1511497584788-876760111969?w=800 800w,
+                            https://images.unsplash.com/photo-1511497584788-876760111969?w=400 400w"
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                    type="image/jpeg">
+                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=800" 
+                     alt="A forest landscape"
+                     loading="lazy">
+            </picture>
+            <p class="image-description">Shows resolution switching with multiple image sizes and responsive loading.</p>
+        </div>
 
-        <!-- Art direction example -->
-        <h2>4. Art Direction Example</h2>
-        <picture>
-            <!-- media with orientation and device-pixel-ratio queries -->
-            <source 
-                media="(orientation: landscape) and (min-device-pixel-ratio: 2)"
-                srcset="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=1600&q=80">
-            <source 
-                media="(orientation: landscape)"
-                srcset="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=1200&q=80">
-            <source 
-                media="(orientation: portrait) and (min-device-pixel-ratio: 2)"
-                srcset="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=1000&q=80">
-            <source 
-                media="(orientation: portrait)"
-                srcset="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?w=800&q=80">
-            <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538" 
-                 alt="A cityscape view"
-                 loading="lazy">
-        </picture>
-        <p class="image-description">Demonstrates art direction with orientation and pixel density considerations.</p>
+        <div class="code-example">
+            <h2>4. Art Direction Example</h2>
+            <picture>
+                <source 
+                    media="(orientation: landscape) and (min-device-pixel-ratio: 2)"
+                    srcset="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200">
+                <source 
+                    media="(orientation: landscape)"
+                    srcset="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800">
+                <source 
+                    media="(orientation: portrait) and (min-device-pixel-ratio: 2)"
+                    srcset="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?h=1200">
+                <source 
+                    media="(orientation: portrait)"
+                    srcset="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?h=800">
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800" 
+                     alt="A cityscape view"
+                     loading="lazy">
+            </picture>
+            <p class="image-description">Demonstrates art direction with orientation and pixel density considerations.</p>
+        </div>
     </div>
 </body>
 </html>

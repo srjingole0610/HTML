@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about HTML5 video elements and their usage">
     <meta name="keywords" content="HTML5 video, video formats, video attributes, web video">
+    <meta name="author" content="Suraj Ingole">
+    <meta name="copyright" content="Suraj Ingole">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
     <title>HTML5 Video Examples and Usage</title>
     <style>
         body {
@@ -16,12 +20,29 @@
             background-color: #f5f5f5;
         }
 
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background-color: #34495e;
+        }
+
         .theory {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin-bottom: 40px;
+            border-left: 5px solid #3498db;
         }
 
         h1 {
@@ -33,17 +54,29 @@
         h2 {
             color: #34495e;
             margin-top: 25px;
+            border-left: 3px solid #e74c3c;
+            padding-left: 10px;
         }
 
         h3 {
             color: #7f8c8d;
         }
 
-        .format-details {
+        .format-details, .advanced-topic, .best-practice {
             background-color: #f8f9fa;
             padding: 20px;
             border-radius: 8px;
             margin: 15px 0;
+        }
+
+        .advanced-topic {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+
+        .best-practice {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
         }
 
         ul {
@@ -101,109 +134,115 @@
         strong {
             color: #e74c3c;
         }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
     </style>
 </head>
 <body>
-    <!-- Theory Section -->
+    <a href="../index.html" class="back-button">&larr; Back to Index</a>
+
     <section class="theory">
         <h1>Understanding HTML5 Video</h1>
-        
+
         <h2>Evolution of Web Video</h2>
-        <p>Before HTML5, web video required plugins like Flash or Silverlight. HTML5 introduced native video support in 2014, revolutionizing web multimedia by enabling direct video playback within browsers using the &lt;video&gt; element.</p>
+        <p>Before HTML5, web video required plugins like Flash or Silverlight. HTML5 introduced native video support in 2014, revolutionizing web multimedia by enabling direct video playback within browsers using the <code>&lt;video&gt;</code> element.</p>
+
+        <div class="advanced-topic">
+            <h3>Historical Context</h3>
+            <p>The journey of web video started with proprietary plugins in the late 1990s. Flash dominated until 2010, when Apple's decision to not support Flash on iOS devices catalyzed the shift towards HTML5 video. This transition marked a significant move towards open web standards.</p>
+        </div>
 
         <h2>The Video Element Architecture</h2>
-        <p>The HTML5 &lt;video&gt; element creates a media player instance in the browser, leveraging the browser's built-in video decoder and rendering engine. It supports multiple source formats through the &lt;source&gt; element for cross-browser compatibility.</p>
+        <p>The HTML5 <code>&lt;video&gt;</code> element creates a media player instance in the browser, leveraging the browser's built-in video decoder and rendering engine. It supports multiple source formats through the <code>&lt;source&gt;</code> element for cross-browser compatibility.</p>
+
+        <div class="best-practice">
+            <h3>Browser Implementation Details</h3>
+            <ul>
+                <li>Chrome uses FFmpeg for decoding</li>
+                <li>Firefox implements its own decoder</li>
+                <li>Safari uses AVFoundation on macOS</li>
+            </ul>
+        </div>
 
         <h2>Video Formats and Codecs</h2>
         <div class="format-details">
             <h3>MP4 (H.264)</h3>
-            <p>The most widely supported format using H.264 video codec and AAC audio codec. Offers excellent compression with high quality, but requires licensing for commercial use.</p>
-            
+            <p>Widely supported, excellent compression with H.264 video and AAC audio codecs.</p>
+
             <h3>WebM (VP8/VP9)</h3>
-            <p>Open-source format developed by Google. VP9 offers better compression than H.264 while maintaining quality. Particularly efficient for streaming but has less legacy browser support.</p>
-            
+            <p>Open-source from Google, better compression but limited legacy browser support.</p>
+
             <h3>Ogg (Theora)</h3>
-            <p>Free, open-source format using Theora video codec and Vorbis audio codec. Less efficient compression than modern alternatives but completely free to use.</p>
+            <p>Free and open, but less efficient than MP4/WebM.</p>
         </div>
 
         <h2>Key Video Attributes In-Depth</h2>
         <ul>
-            <li><strong>src</strong> - Specifies the video source URL. Can be omitted when using &lt;source&gt; elements for multiple formats.</li>
-            <li><strong>controls</strong> - Enables browser's native controls. Each browser implements its own control UI design.</li>
-            <li><strong>width/height</strong> - Defines dimensions in pixels. Important for preventing layout shifts during loading.</li>
-            <li><strong>autoplay</strong> - Automatically starts playback. Many browsers require 'muted' attribute for autoplay to work due to user experience policies.</li>
-            <li><strong>muted</strong> - Disables audio output. Essential for autoplay functionality in modern browsers.</li>
-            <li><strong>loop</strong> - Restarts video after completion. Useful for background videos or short clips.</li>
-            <li><strong>poster</strong> - Displays a preview image. Should be optimized for quick loading.</li>
-            <li><strong>preload</strong>:
-                <ul>
-                    <li>auto - Browser decides how much to preload</li>
-                    <li>metadata - Only loads video metadata (duration, dimensions, first frame)</li>
-                    <li>none - Doesn't preload any data until play is initiated</li>
-                </ul>
-            </li>
-            <li><strong>playsinline</strong> - Controls fullscreen behavior on mobile devices</li>
-            <li><strong>crossorigin</strong> - Handles CORS requests for videos from different domains</li>
+            <li><strong>src</strong>, <strong>controls</strong>, <strong>width</strong>, <strong>autoplay</strong>, <strong>muted</strong>, <strong>loop</strong>, <strong>poster</strong>, <strong>preload</strong>, <strong>playsinline</strong>, <strong>crossorigin</strong></li>
         </ul>
 
         <h2>Advanced Features</h2>
         <ul>
-            <li><strong>Media Source Extensions (MSE)</strong> - Enables adaptive streaming for dynamic quality adjustment</li>
-            <li><strong>WebVTT</strong> - Supports subtitles, captions, and chapters through &lt;track&gt; elements</li>
-            <li><strong>Picture-in-Picture</strong> - Allows video to play in floating window outside the browser</li>
-            <li><strong>Media Session API</strong> - Enables integration with system media controls</li>
+            <li><strong>MSE</strong> - Adaptive streaming</li>
+            <li><strong>WebVTT</strong> - Subtitles and captions</li>
+            <li><strong>Picture-in-Picture</strong> support</li>
+            <li><strong>Media Session API</strong> integration</li>
         </ul>
 
         <h2>Performance Considerations</h2>
         <ul>
-            <li>Use appropriate video dimensions and compression for target devices</li>
-            <li>Consider bandwidth costs and implement adaptive streaming for large files</li>
-            <li>Implement lazy loading for videos below the fold</li>
-            <li>Optimize poster images for faster initial page load</li>
-            <li>Use preload="metadata" for better initial page performance</li>
+            <li>Adaptive streaming, lazy loading, optimized poster images, bandwidth efficiency</li>
         </ul>
+
+        <h2>Advanced Technical Considerations</h2>
+        <div class="advanced-topic">
+            <h3>Video Streaming Protocols</h3>
+            <ul>
+                <li>HLS, DASH, WebRTC</li>
+            </ul>
+        </div>
+
+        <div class="best-practice">
+            <h3>Optimization Techniques</h3>
+            <ul>
+                <li>HTTP/2, CDN, WebAssembly, error handling</li>
+            </ul>
+        </div>
     </section>
 
     <h1>HTML5 Video Examples</h1>
 
-    <!-- Rest of the code remains unchanged -->
-    <!-- Basic video example with multiple source formats for cross-browser compatibility -->
     <section>
         <h2>Basic Video Player</h2>
         <video width="640" height="360" controls>
-            <source src="video/sample-5s.mp4" type="video/mp4">
-            <source src="video/sample-5s.webm" type="video/webm">
+            <source src="../video/sample-5s.mp4" type="video/mp4">
+            <source src="../video/sample-5s.webm" type="video/webm">
             <track src="captions.vtt" kind="captions" srclang="en" label="English">
             Your browser does not support the video tag.
         </video>
     </section>
 
-    <!-- Advanced video player demonstrating multiple HTML5 video attributes -->
     <section>
         <h2>Video with Advanced Attributes</h2>
-        <video width="480" height="270" 
-               controls 
-               autoplay 
-               muted 
-               loop 
-               poster="images/hong-zhao-eGnfcEfkP04-unsplash.jpg"
-               preload="auto">
-            <source src="video/sample-10s.mp4" type="video/mp4">
-            <source src="video/sample-10s.webm" type="video/webm">
-            <source src="video/sample-10s.ogg" type="video/ogg">
-            <!-- Fallback content for browsers that don't support HTML5 video -->
+        <video width="480" height="270" controls autoplay muted loop poster="images/hong-zhao-eGnfcEfkP04-unsplash.jpg" preload="auto">
+            <source src="../video/sample-10s.mp4" type="video/mp4">
+            <source src="../video/sample-10s.webm" type="video/webm">
+            <source src="../video/sample-10s.ogg" type="video/ogg">
             <p>Your browser doesn't support HTML5 video. Here is a <a href="advanced-video.mp4">link to the video</a> instead.</p>
         </video>
     </section>
 
-    <!-- Custom video player with JavaScript-powered controls -->
     <section>
         <h2>Custom Controls Example</h2>
         <div class="video-container">
             <video id="customVideo" width="720" height="480">
-                <source src="video/sample-5s.mp4" type="video/mp4">
+                <source src="../video/sample-5s.mp4" type="video/mp4">
             </video>
-            <!-- Custom control interface -->
             <div class="custom-controls">
                 <button onclick="playPause()">Play/Pause</button>
                 <input type="range" id="seekBar" value="0">
@@ -213,60 +252,43 @@
         </div>
     </section>
 
-    <!-- Responsive video implementation using CSS positioning -->
     <section>
         <h2>Responsive Video</h2>
         <div style="position: relative; padding-bottom: 56.25%; height: 0;">
             <video style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" controls>
-                <source src="video/sample-10s.mp4" type="video/mp4">
+                <source src="../video/sample-10s.mp4" type="video/mp4">
             </video>
         </div>
     </section>
 
-    <!-- Picture-in-Picture functionality demonstration -->
     <section>
         <h2>Picture-in-Picture Support</h2>
-        <video id="pipVideo" 
-               width="640" 
-               height="360" 
-               controls 
-               pip="true"
-               disablePictureInPicture="false">
+        <video id="pipVideo" width="640" height="360" controls pip="true" disablePictureInPicture="false">
             <source src="pip-video.mp4" type="video/mp4">
         </video>
     </section>
 
     <script>
-        // Initialize video and control elements
         const video = document.getElementById('customVideo');
         const seekBar = document.getElementById('seekBar');
         const volumeBar = document.getElementById('volumeBar');
 
-        // Toggle play/pause functionality
         function playPause() {
-            if (video.paused) {
-                video.play();
-            } else {
-                video.pause();
-            }
+            video.paused ? video.play() : video.pause();
         }
 
-        // Toggle mute state
         function toggleMute() {
             video.muted = !video.muted;
         }
 
-        // Update seek bar position as video plays
         video.addEventListener('timeupdate', function() {
             seekBar.value = (video.currentTime / video.duration) * 100;
         });
 
-        // Handle manual seeking through the video
         seekBar.addEventListener('change', function() {
             video.currentTime = video.duration * (seekBar.value / 100);
         });
 
-        // Handle volume control changes
         volumeBar.addEventListener('change', function() {
             video.volume = volumeBar.value;
         });
