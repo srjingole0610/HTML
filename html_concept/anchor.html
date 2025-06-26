@@ -4,93 +4,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anchor Tag</title>
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #202124;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #3c4043;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #1557b0;
+            transform: translateY(-2px);
+        }
+
+        .theory-section {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .code-example {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #1a73e8;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #1557b0;
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .example-section {
+            background-color: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .disabled-link {
+            color: #9aa0a6;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
+    <a href="../index.html" class="back-button">Back to Index</a>
+    
     <h1>Anchor Tag</h1>
-    <!-- The <a> tag defines a hyperlink -->
-    <!-- href attribute specifies the URL/destination of the link -->
-    <!-- Common attributes:
-         - href: URL/destination
-         - target: specifies where to open the link (_blank, _self, _parent, _top)
-         - title: tooltip text on hover
-         - download: specifies file should be downloaded
-         - rel: relationship between current and linked document
-    -->
+    
+    <div class="theory-section">
+        <h2>Understanding the Anchor Tag</h2>
+        <p>The anchor tag (&lt;a&gt;) is one of the most fundamental HTML elements, creating hyperlinks that connect the World Wide Web. It was introduced with HTML 1.0 and remains crucial for web navigation.</p>
+        
+        <h3>Key Concepts:</h3>
+        <ul>
+            <li><strong>Hyperlink Types:</strong> Anchors can create both internal (within the same site) and external (to other websites) links</li>
+            <li><strong>Protocol Support:</strong> Supports various protocols including HTTP, HTTPS, mailto, tel, ftp, and file</li>
+            <li><strong>Accessibility:</strong> Proper anchor implementation is crucial for web accessibility and SEO</li>
+        </ul>
+
+        <h3>Essential Attributes:</h3>
+        <ul>
+            <li><strong>href</strong> - Specifies the destination URL
+                <ul>
+                    <li>Absolute URLs: Complete web address (https://www.example.com)</li>
+                    <li>Relative URLs: Path relative to current location (./about.html)</li>
+                    <li>Fragment identifiers: Jump to page sections (#section-id)</li>
+                </ul>
+            </li>
+            <li><strong>target</strong> - Controls how the link opens
+                <ul>
+                    <li>_self: Same window/tab (default)</li>
+                    <li>_blank: New window/tab</li>
+                    <li>_parent: Parent frame</li>
+                    <li>_top: Full window body</li>
+                </ul>
+            </li>
+            <li><strong>rel</strong> - Defines relationship between current and linked document
+                <ul>
+                    <li>nofollow: Tells search engines not to follow the link</li>
+                    <li>noopener: Prevents security vulnerabilities with target="_blank"</li>
+                    <li>noreferrer: Prevents passing referrer information</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
     <!-- Understanding URLs -->
-    <h2>Types of URLs</h2>
-    <!-- Absolute URLs: Complete web address including protocol and domain -->
-    <div>
-        <h3>Absolute URLs (Complete web address)</h3>
-        <p><a href="https://www.example.com">Full website address</a></p>
-        <p><a href="https://www.example.com/about/team.html">Deep page link</a></p>
+    <div class="example-section">
+        <h2>Types of URLs</h2>
+        <!-- Absolute URLs: Complete web address including protocol and domain -->
+        <div class="code-example">
+            <h3>Absolute URLs (Complete web address)</h3>
+            <p><a href="https://www.example.com">Full website address</a></p>
+            <p><a href="https://www.example.com/about/team.html">Deep page link</a></p>
+        </div>
+
+        <!-- Relative URLs: Links relative to current page location -->
+        <div class="code-example">
+            <h3>Relative URLs (Links relative to current page)</h3>
+            <p><a href="about.html">Same folder file</a></p>
+            <p><a href="./images/photo.jpg">File in subfolder</a></p>
+            <p><a href="../index.html">File in parent folder</a></p>
+        </div>
     </div>
 
-    <!-- Relative URLs: Links relative to current page location -->
-    <div>
-        <h3>Relative URLs (Links relative to current page)</h3>
-        <p><a href="about.html">Same folder file</a></p>
-        <p><a href="./images/photo.jpg">File in subfolder</a></p>
-        <p><a href="../index.html">File in parent folder</a></p>
+    <div class="example-section">
+        <h2>Link Examples</h2>
+        <!-- Basic link to external website -->
+        <div class="code-example">
+            <p><a href="https://www.example.com">Basic External Link</a></p>
+
+            <!-- Link that opens in new tab -->
+            <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Opens in New Tab</a></p>
+
+            <!-- Link to email -->
+            <p><a href="mailto:example@email.com">Send Email</a></p>
+
+            <!-- Link to phone number -->
+            <p><a href="tel:+1234567890">Call Us</a></p>
+        </div>
+
+        <!-- Special Links -->
+        <div class="code-example">
+            <!-- Link to internal page -->
+            <p><a href="about.html">Internal Page Link</a></p>
+
+            <!-- Link to specific section using ID -->
+            <p><a href="#section1">Jump to Section</a></p>
+
+            <!-- Link with title attribute -->
+            <p><a href="https://www.example.com" title="Visit Example Website">Hover to See Title</a></p>
+
+            <!-- Link with custom styling -->
+            <p><a href="https://www.example.com" style="color: #e37400;">Styled Link</a></p>
+
+            <!-- Download link -->
+            <p><a href="files/document.pdf" download>Download PDF</a></p>
+        </div>
+
+        <!-- Media Links -->
+        <div class="code-example">
+            <!-- Link with image -->
+            <p><a href="https://www.youtube.com" target="_blank">
+                <img src="../images/annie-spratt-H33FOyRKgfk-unsplash.jpg" alt="Click Me" width="100">
+            </a></p>
+
+            <!-- Disabled link -->
+            <p><a href="javascript:void(0)" class="disabled-link">Disabled Link</a></p>
+        </div>
     </div>
-
-    <!-- Basic link to external website -->
-    <p><a href="https://www.example.com">Basic External Link</a></p>
-
-    <!-- Link that opens in new tab -->
-    <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Opens in New Tab</a></p>
-
-    <!-- Link to email -->
-    <p><a href="mailto:example@email.com">Send Email</a></p>
-
-    <!-- Link to phone number -->
-    <p><a href="tel:+1234567890">Call Us</a></p>
-
-    <!-- Link to internal page -->
-    <p><a href="about.html">Internal Page Link</a></p>
-
-    <!-- Link to specific section using ID -->
-    <p><a href="#section1">Jump to Section</a></p>
-
-    <!-- Link with title attribute -->
-    <p><a href="https://www.example.com" title="Visit Example Website">Hover to See Title</a></p>
-
-    <!-- Link with custom styling -->
-    <p><a href="https://www.example.com" style="color: red; text-decoration: none;">Styled Link</a></p>
-
-    <!-- Download link -->
-    <p><a href="files/document.pdf" download>Download PDF</a></p>
-
-    <!-- Link with image -->
-    <p><a href="https://www.example.com">
-        <img src="image.jpg" alt="Click Me" width="100">
-    </a></p>
-
-    <!-- Disabled link -->
-    <p><a href="javascript:void(0)" style="pointer-events: none; color: gray;">Disabled Link</a></p>
 
     <!-- Examples of rel attribute -->
-    <div>
-        <p><a href="https://www.example.com" rel="nofollow">No Follow Link</a></p>
-        <p><a href="https://www.example.com" rel="bookmark">Bookmark Link</a></p>
-        <p><a href="https://www.example.com" rel="author">Author Link</a></p>
-        <p><a href="https://www.example.com" rel="license">License Link</a></p>
-        <p><a href="https://www.example.com" rel="prev">Previous Page</a></p>
-        <p><a href="https://www.example.com" rel="next">Next Page</a></p>
-        <p><a href="https://www.example.com" rel="alternate">Alternate Version</a></p>
+    <div class="example-section">
+        <h2>Rel Attribute Examples</h2>
+        <div class="code-example">
+            <p><a href="https://www.example.com" rel="nofollow">No Follow Link</a></p>
+            <p><a href="https://www.example.com" rel="bookmark">Bookmark Link</a></p>
+            <p><a href="https://www.example.com" rel="author">Author Link</a></p>
+            <p><a href="https://www.example.com" rel="license">License Link</a></p>
+            <p><a href="https://www.example.com" rel="prev">Previous Page</a></p>
+            <p><a href="https://www.example.com" rel="next">Next Page</a></p>
+            <p><a href="https://www.example.com" rel="alternate">Alternate Version</a></p>
+        </div>
     </div>
 
     <!-- Section for anchor target -->
-    <div id="section1">
+    <div id="section1" class="example-section">
         <h2>Section 1</h2>
         <p>This is the section referenced by the anchor link above.</p>
     </div>
 
     <!-- Relative path examples -->
-    <div>
-        <p><a href="./same-folder.html">Same Folder</a></p>
-        <p><a href="../parent-folder.html">Parent Folder</a></p>
-        <p><a href="subfolder/child.html">Child Folder</a></p>
+    <div class="example-section">
+        <h2>Relative Path Examples</h2>
+        <div class="code-example">
+            <p><a href="./same-folder.html">Same Folder</a></p>
+            <p><a href="../parent-folder.html">Parent Folder</a></p>
+            <p><a href="subfolder/child.html">Child Folder</a></p>
+        </div>
     </div>
 </body>
 </html>

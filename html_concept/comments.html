@@ -3,33 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Comments </title>
+    <meta name="description" content="Comprehensive guide to HTML comments with examples and theory">
+    <meta name="keywords" content="HTML, comments, web development, documentation">
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
+    <title>HTML Comments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .theory-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        .example {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin: 10px 0;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+    <a href="../index.html" class="back-button">← Back to Index</a>
     <h1>HTML Comments</h1>
     
-    <!-- This is a single line comment -->
-    <p>Comments are not displayed in the browser</p>
+    <div class="theory-section">
+        <h2>What are HTML Comments?</h2>
+        <p>HTML comments are notes that developers can add to their HTML code that won't be visible in the browser. They are crucial for code documentation and maintenance.</p>
+        
+        <h2>Comment Syntax</h2>
+        <p>HTML comments begin with <code>&lt;!--</code> and end with <code>--&gt;</code></p>
+        
+        <div class="example">
+            <!-- This is a single line comment -->
+            <p>Comments are not displayed in the browser</p>
+        </div>
+    </div>
 
-    <!-- 
-        This is a multi-line comment
-        HTML comments start with <!-- and end with -->
-        They are useful for:
-        1. Documenting your code
-        2. Debugging
-        3. Temporarily disabling content
-    -->
-    <p>Comments help other developers understand your code</p>
+    <div class="theory-section">
+        <h2>Types of Comments</h2>
+        
+        <h3>1. Single-line Comments</h3>
+        <div class="example">
+            <!-- This is a single line comment -->
+            <p>Simple, brief notes about code</p>
+        </div>
 
-    <!-- Comments can contain <p>HTML tags</p> and special characters !@#$ -->
-    <p>But they won't be rendered by the browser</p>
+        <h3>2. Multi-line Comments</h3>
+        <div class="example">
+            <!-- 
+                This is a multi-line comment
+                HTML comments start with <!-- and end with -->
+                They are useful for:
+                1. Documenting your code
+                2. Debugging
+                3. Temporarily disabling content
+            -->
+            <p>Comments help other developers understand your code</p>
+        </div>
+    </div>
 
-    <!--
-        Best Practices:
-        - Keep comments clear and concise
-        - Use them to explain complex code sections
-        - Don't overuse comments
-        - Remove debugging comments before production
-    -->
+    <div class="theory-section">
+        <h2>Comment Capabilities</h2>
+        <div class="example">
+            <!-- Comments can contain <p>HTML tags</p> and special characters !@#$ -->
+            <p>But they won't be rendered by the browser</p>
+        </div>
+    </div>
+
+    <div class="theory-section">
+        <h2>Best Practices for HTML Comments</h2>
+        <ul>
+            <li>Keep comments clear and concise</li>
+            <li>Use them to explain complex code sections</li>
+            <li>Don't overuse comments - code should be self-documenting</li>
+            <li>Remove debugging comments before production</li>
+            <li>Use comments to mark important sections of your code</li>
+            <li>Avoid commenting obvious things</li>
+            <li>Keep comments up to date with code changes</li>
+        </ul>
+    </div>
+
+    <div class="theory-section">
+        <h2>Common Use Cases</h2>
+        <ul>
+            <li>Documentation of code functionality</li>
+            <li>Temporary code removal during debugging</li>
+            <li>TODO markers for future development</li>
+            <li>Section organization in large HTML files</li>
+            <li>Attribution and copyright notices</li>
+        </ul>
+    </div>
 </body>
 </html>

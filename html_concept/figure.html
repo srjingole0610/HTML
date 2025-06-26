@@ -13,106 +13,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Ensures proper scaling on mobile devices. Sets viewport width to device width and initial zoom level to 1.0 -->
     
+    <meta name="description" content="Learn about HTML figure tag, its usage, and best practices">
+    <!-- Provides a brief description of the webpage for search engines and social media sharing -->
+    
+    <meta name="keywords" content="HTML, figure, container, image, caption, best practices">
+    <!-- Specifies keywords for search engines and social media sharing -->
+    
+    <link rel="icon" type="image/x-icon" href="../images/icons8-html-filetype-48.png">
+    <!-- Specifies the icon for the webpage in the browser tab -->
+    
     <title>Understanding HTML Figure Tag</title>
     <!-- Defines the title shown in browser tab/window -->
     
     <style>
         /* CSS styles section */
-        figure {
-            /* Styles for figure container */
-            border: 1px solid #ddd;      /* Light gray border */
-            padding: 15px;               /* Inner spacing */
-            margin: 20px;                /* Outer spacing */
-            text-align: center;          /* Centers content */
-            max-width: 600px;            /* Maximum width limit */
-        }
-        figcaption {
-            /* Styles for figure caption */
-            font-style: italic;          /* Italicizes text */
-            margin-top: 10px;            /* Space above caption */
-        }
-        img {
-            /* Styles for images */
-            max-width: 100%;             /* Responsive width */
-            height: auto;                /* Maintains aspect ratio */
-        }
-        .theory-section {
-            background: #f5f5f5;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            margin: 20px;
+            background-color: #f0f2f5;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
             border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        figure {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 20px auto;
+            text-align: center;
+            max-width: 600px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        figure:hover {
+            transform: translateY(-5px);
+        }
+
+        figcaption {
+            font-style: italic;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .theory-section {
+            background: white;
+            padding: 25px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .theory-section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .theory-section h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        #featured-image {
+            border: 2px solid #3498db;
         }
     </style>
 </head>
 
 <body>
-    <!-- Main content container of the document -->
+    <!-- Back button -->
+    <a href="../index.html" class="back-button">← Back to Index</a>
     
     <h1>Understanding the HTML Figure Tag</h1>
     <!-- Level 1 heading - main title of the page -->
 
     <div class="theory-section">
-        <h2>HTML Theory: Tags, Elements, and Attributes</h2>
+        <h2>HTML Theory: Figure Tag and Its Components</h2>
         
-        <h3>HTML Tags</h3>
-        <p>Tags are the fundamental building blocks of HTML. They are enclosed in angle brackets &lt; &gt; and usually come in pairs:</p>
+        <h3>The Figure Element (&lt;figure&gt;)</h3>
+        <p>The figure element represents self-contained content that is referenced from the main content. Key characteristics:</p>
         <ul>
-            <li><strong>Opening tag:</strong> &lt;tagname&gt;</li>
-            <li><strong>Closing tag:</strong> &lt;/tagname&gt;</li>
-            <li><strong>Example:</strong> &lt;figure&gt; and &lt;/figure&gt;</li>
+            <li><strong>Purpose:</strong> Groups media content with its caption</li>
+            <li><strong>Self-contained:</strong> Should be able to be moved away from the main content without affecting the document's flow</li>
+            <li><strong>Content types:</strong> Can contain images, diagrams, code snippets, audio, video, or other multimedia content</li>
+            <li><strong>Semantic meaning:</strong> Provides better structure and accessibility for screen readers</li>
         </ul>
 
-        <h3>HTML Elements</h3>
-        <p>An HTML element consists of a start tag, content, and an end tag:</p>
+        <h3>Figure Caption (&lt;figcaption&gt;)</h3>
+        <p>The figcaption element provides a caption or legend for the figure content:</p>
         <ul>
-            <li>The &lt;figure&gt; element is used to mark up a self-contained content unit</li>
-            <li>The &lt;figcaption&gt; element provides a caption for the figure</li>
-            <li>The &lt;img&gt; element is a self-closing tag used to embed images</li>
+            <li><strong>Position:</strong> Can be placed as first or last child of figure</li>
+            <li><strong>Optional:</strong> Not required, but recommended for accessibility</li>
+            <li><strong>Content:</strong> Can contain any flow content (text, links, etc.)</li>
+            <li><strong>Quantity:</strong> Maximum one figcaption per figure element</li>
         </ul>
 
-        <h3>HTML Attributes</h3>
-        <p>Attributes provide additional information or properties to HTML elements:</p>
+        <h3>Advanced Figure Attributes</h3>
+        <p>Figure elements can have various attributes for enhanced functionality:</p>
         <ul>
-            <li><strong>src:</strong> Specifies the source URL of an image</li>
-            <li><strong>alt:</strong> Provides alternative text for accessibility</li>
-            <li><strong>width/height:</strong> Defines dimensions of an element</li>
-            <li><strong>class:</strong> Assigns one or more CSS classes</li>
-            <li><strong>id:</strong> Provides a unique identifier</li>
+            <li><strong>role:</strong> Defines the ARIA role for accessibility (e.g., role="group")</li>
+            <li><strong>aria-labelledby:</strong> Links figure to its caption for screen readers</li>
+            <li><strong>data-*:</strong> Custom data attributes for JavaScript interaction</li>
+            <li><strong>itemscope/itemtype:</strong> For schema.org microdata markup</li>
+        </ul>
+
+        <h3>Best Practices</h3>
+        <ul>
+            <li>Always provide alternative text for images within figures</li>
+            <li>Use semantic class names for styling</li>
+            <li>Ensure figures are responsive on different screen sizes</li>
+            <li>Keep figure content and captions concise and relevant</li>
         </ul>
     </div>
 
     <!-- Basic figure with image and caption -->
     <figure>
         <!-- Container for self-contained content, typically media with caption -->
-        <img src="https://images.unsplash.com/photo-1682687220742-aba19b51f36e" 
-             alt="A beautiful mountain landscape"    <!-- Alternative text for accessibility -->
-             width="500"                            <!-- Image width in pixels -->
-             height="300">                          <!-- Image height in pixels -->
-        <figcaption>A scenic mountain view captured at sunset</figcaption>
-        <!-- Caption text describing the figure content -->
+        <img src="https://images.pexels.com/photos/1624438/pexels-photo-1624438.jpeg" 
+             alt="A beautiful mountain landscape with snow-capped peaks"
+             width="500"
+             height="300">
+        <figcaption>Majestic mountain peaks covered in snow against a clear blue sky</figcaption>
     </figure>
 
     <!-- Figure with multiple images -->
     <figure>
-        <img src="https://images.unsplash.com/photo-1682687221038-404670d5b53d" 
-             alt="Mountain lake"
+        <img src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg" 
+             alt="Serene mountain lake reflecting surrounding peaks"
              width="300"
              height="200">
-        <img src="https://images.unsplash.com/photo-1682687220198-88e9bdea9931" 
-             alt="Forest path"
+        <img src="https://images.pexels.com/photos/1578750/pexels-photo-1578750.jpeg" 
+             alt="Mystical forest path through tall trees"
              width="300"
              height="200">
-        <figcaption>Different perspectives of nature: a mountain lake and a forest path</figcaption>
+        <figcaption>Nature's Contrasts: A tranquil mountain lake and a mysterious forest trail</figcaption>
     </figure>
 
     <!-- Figure with custom attributes -->
-    <figure id="featured-image" class="highlight-figure">
-        <!-- 'id' provides unique identifier, 'class' enables styling via CSS -->
-        <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538" 
-             alt="Sunset over mountains"
+    <figure id="featured-image" class="highlight-figure" role="group" aria-labelledby="featured-caption">
+        <img src="https://images.pexels.com/photos/1834399/pexels-photo-1834399.jpeg" 
+             alt="Dramatic sunset painting the sky in vibrant colors over mountain silhouettes"
              width="500"
              height="300">
-        <figcaption>Featured image: Breathtaking sunset over mountain ranges</figcaption>
+        <figcaption id="featured-caption">Featured image: Epic mountain sunset with dramatic cloud formations</figcaption>
     </figure>
 </body>
 </html>
