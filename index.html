@@ -8,96 +8,66 @@
     <meta name="author" content="Suraj Ingole">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="images/icons8-html-filetype-48.png" type="image/x-icon">
-
     <title>HTML Files Directory</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1, h2 {
-            color: #333;
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #ddd;
-        }
-        .file-list, .challenge-list {
-            list-style: none;
-            padding: 0;
-        }
-        .file-list li, .challenge-list li {
-            margin: 10px 0;
-        }
-        .file-list a, .challenge-list a {
-            display: block;
-            padding: 10px 15px;
-            background-color: white;
-            color: #2c3e50;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        .file-list a:hover, .challenge-list a:hover {
-            background-color: #3498db;
-            color: white;
-            transform: translateX(10px);
-        }
-        .challenge-list a {
-            background-color: #f8f9fa;
-            border-left: 4px solid #28a745;
-        }
-        .challenge-list a:hover {
-            background-color: #28a745;
-        }
-        .section-divider {
-            margin: 40px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HTML Files Directory</h1>
-    <ul class="file-list">
-        <li><a href="html_concept/accessibility.html">Accessibility Page</a></li>
-        <li><a href="html_concept/anchor.html">Anchor Page</a></li>
-        <li><a href="html_concept/audio.html">Audio Page</a></li>
-        <li><a href="html_concept/blockelements.html">Block Elements Page</a></li>
-        <li><a href="html_concept/canvas_svg.html">Canvas and SVG Page</a></li>
-        <li><a href="html_concept/comments.html">Comments Page</a></li>
-        <li><a href="html_concept/divspan.html">Div and Span Page</a></li>
-        <li><a href="html_concept/figure.html">Figure Page</a></li>
-        <li><a href="html_concept/form.html">Form Page</a></li>
-        <li><a href="html_concept/heading.html">Heading Page</a></li>
-        <li><a href="html_concept/htmlEntities.html">HTML Entities Page</a></li>
-        <li><a href="html_concept/html5api.html">HTML5 API Page</a></li>
-        <li><a href="html_concept/iframe.html">Iframe Page</a></li>
-        <li><a href="html_concept/image.html">Image Page</a></li>
-        <li><a href="html_concept/inlineelements.html">Inline Elements Page</a></li>
-        <li><a href="html_concept/list.html">List Page</a></li>
-        <li><a href="html_concept/meta.html">Meta Page</a></li>
-        <li><a href="html_concept/paragraph.html">Paragraph Page</a></li>
-        <li><a href="html_concept/picture.html">Picture Page</a></li>
-        <li><a href="html_concept/semantic.html">Semantic Page</a></li>
-        <li><a href="html_concept/seo.html">SEO Page</a></li>
-        <li><a href="html_concept/table.html">Table Page</a></li>
-        <li><a href="html_concept/textFormatting.html">Text Formatting Page</a></li>
-        <li><a href="html_concept/video.html">Video Page</a></li>
-        <li><a href="html_concept/voidElements.html">Void Elements Page</a></li>
-    </ul>
-
-    <div class="section-divider"></div>
-    
-    <h2>HTML Challenges</h2>
-    <ul class="challenge-list">
-        <li><a href="challenges/basic-structure.html">Challenge 1: Create Basic HTML Structure</a></li>
-        <li><a href="challenges/image-gallery.html">Challenge 2: Build An Image Gallery</a></li>
-        <li><a href="challenges/form-validation.html">Challenge 3: Form with Validation</a></li>
-        <li><a href="challenges/responsive-table.html">Challenge 4: Responsive Table Design</a></li>
-        <li><a href="challenges/multimedia.html">Challenge 5: Multimedia Integration</a></li>
-        <li><a href="challenges/embedded-widget.html">Challenge 6: Create a Secure Embedded Widget</a></li>
-    </ul>
+    <header class="hero">
+        <div class="hero-content">
+            <h1><span class="logo-inline"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Icon" class="logo-inline-img"></span> HTML Mastery Hub</h1>
+            <p class="subtitle">Your interactive journey to mastering HTML fundamentals</p>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <h2><span class="section-icon">📚</span> HTML Concepts</h2>
+            <ul class="file-list">
+                <li><a href="html_concept/accessibility.html">Accessibility</a></li>
+                <li><a href="html_concept/anchor.html">Anchor</a></li>
+                <li><a href="html_concept/audio.html">Audio</a></li>
+                <li><a href="html_concept/blockelements.html">Block Elements</a></li>
+                <li><a href="html_concept/canvas_svg.html">Canvas & SVG</a></li>
+                <li><a href="html_concept/comments.html">Comments</a></li>
+                <li><a href="html_concept/divspan.html">Div & Span</a></li>
+                <li><a href="html_concept/figure.html">Figure</a></li>
+                <li><a href="html_concept/form.html">Form</a></li>
+                <li><a href="html_concept/heading.html">Heading</a></li>
+                <li><a href="html_concept/htmlEntities.html">HTML Entities</a></li>
+                <li><a href="html_concept/html5api.html">HTML5 API</a></li>
+                <li><a href="html_concept/iframe.html">Iframe</a></li>
+                <li><a href="html_concept/image.html">Image</a></li>
+                <li><a href="html_concept/inlineelements.html">Inline Elements</a></li>
+                <li><a href="html_concept/list.html">List</a></li>
+                <li><a href="html_concept/meta.html">Meta</a></li>
+                <li><a href="html_concept/paragraph.html">Paragraph</a></li>
+                <li><a href="html_concept/picture.html">Picture</a></li>
+                <li><a href="html_concept/semantic.html">Semantic</a></li>
+                <li><a href="html_concept/seo.html">SEO</a></li>
+                <li><a href="html_concept/table.html">Table</a></li>
+                <li><a href="html_concept/textFormatting.html">Text Formatting</a></li>
+                <li><a href="html_concept/video.html">Video</a></li>
+                <li><a href="html_concept/voidElements.html">Void Elements</a></li>
+            </ul>
+        </section>
+        <section class="section challenges">
+            <h2><span class="section-icon">🎯</span> HTML Challenges</h2>
+            <ul class="challenge-list">
+                <li><a href="challenges/basic-structure.html">Challenge 1: Create Basic HTML Structure</a></li>
+                <li><a href="challenges/image-gallery.html">Challenge 2: Build An Image Gallery</a></li>
+                <li><a href="challenges/form-validation.html">Challenge 3: Form with Validation</a></li>
+                <li><a href="challenges/responsive-table.html">Challenge 4: Responsive Table Design</a></li>
+                <li><a href="challenges/multimedia.html">Challenge 5: Multimedia Integration</a></li>
+                <li><a href="challenges/embedded-widget.html">Challenge 6: Create a Secure Embedded Widget</a></li>
+            </ul>
+        </section>
+        <section class="cta-section">
+            <h2>Ready to Level Up?</h2>
+            <p>Explore, experiment, and become an HTML pro! 🚀</p>
+            <a href="document/Suraj_Ingole_CV.pdf" class="cta-btn" target="_blank">Download My CV</a>
+        </section>
+    </main>
+    <footer>
+        <p>Made with ❤️ by Suraj Ingole &middot; <a href="https://unsplash.com/" target="_blank">Banner Image: Unsplash</a></p>
+    </footer>
 </body>
 </html>
