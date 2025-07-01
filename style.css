@@ -121,22 +121,17 @@ main {
     border: 2px solid transparent;
     position: relative;
 }
+.challenge-list a {
+    background: #fdf6e3;
+    border-left: 5px solid #ff9800;
+    color: #232526;
+}
 .file-list a:hover, .challenge-list a:hover {
     background: linear-gradient(90deg, #232526 0%, #ff9800 100%);
     color: #fff;
     border-color: #1976d2;
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 4px 16px rgba(25,118,210,0.10);
-}
-.challenge-list a {
-    background: #fdf6e3;
-    border-left: 5px solid #ff9800;
-    color: #232526;
-}
-.challenge-list a:hover {
-    background: linear-gradient(90deg, #232526 0%, #ff9800 100%);
-    border-color: #1976d2;
-    color: #fff;
 }
 .cta-section {
     text-align: center;
